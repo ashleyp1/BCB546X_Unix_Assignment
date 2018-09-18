@@ -22,14 +22,16 @@ cat maize_genotypes.txt >> proper_genotype.txt
 ```
  awk -f transpose.awk proper_teosinte_genotypes.txt > trans_teosinte_geno.txt
 ```
-* Sort `snp_positions.txt` `trans_teosinte_geno.txt`
+* Sort `snp_positions.txt`, `trans_teosinte_geno.txt`, and `trans_maize_geno.txt`. Save as sorted versions.
 ```
 sort -k1,1 file.txt > sorted_file.txt
+```
+* Join files
 ```
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NDc3Nzk4NSwtMTk1ODYwMjM3MCwxNj
-I2MTYwNDEsLTc2MDgyNzk1OCwzMjA0OTUzNzIsNjYzNTcyOTIy
-LC0xNzI3OTcyOTE0LDYxMjI3MDUsOTI2NjQzNjQzXX0=
+eyJoaXN0b3J5IjpbLTU1MzYyNjQ3LC0xOTU4NjAyMzcwLDE2Mj
+YxNjA0MSwtNzYwODI3OTU4LDMyMDQ5NTM3Miw2NjM1NzI5MjIs
+LTE3Mjc5NzI5MTQsNjEyMjcwNSw5MjY2NDM2NDNdfQ==
 -->
