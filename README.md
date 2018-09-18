@@ -16,9 +16,14 @@ grep ZMM?? fang_et_al_genotypes.txt >> maize_genotypes.txt
 ```
  awk -f transpose.awk teosinte_genotypes.txt > transposed_teosinte_genotypes.txt
 ```
+
+```
+sort -k1,1 transposed_teosinte_genotypes.txt > sorted_trans_teosinte_genotypes.txt
+```
+
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MDgyNzk1OCwzMjA0OTUzNzIsNjYzNT
-cyOTIyLC0xNzI3OTcyOTE0LDYxMjI3MDUsOTI2NjQzNjQzXX0=
-
+eyJoaXN0b3J5IjpbMTYyNjE2MDQxLC03NjA4Mjc5NTgsMzIwND
+k1MzcyLDY2MzU3MjkyMiwtMTcyNzk3MjkxNCw2MTIyNzA1LDky
+NjY0MzY0M119
 -->
