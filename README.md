@@ -12,8 +12,13 @@ cut -f 1-5 snp_position.txt | column -t | head -n 5
 ```
 grep ZMM?? fang_et_al_genotypes.txt >> maize_genotypes.txt
 ```
+
+```
+ awk -f transpose.awk teosinte_genotypes.txt > transposed_teosinte_genotypes.txt
+```
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIwNDk1MzcyLDY2MzU3MjkyMiwtMTcyNz
-k3MjkxNCw2MTIyNzA1LDkyNjY0MzY0M119
+eyJoaXN0b3J5IjpbLTc2MDgyNzk1OCwzMjA0OTUzNzIsNjYzNT
+cyOTIyLC0xNzI3OTcyOTE0LDYxMjI3MDUsOTI2NjQzNjQzXX0=
+
 -->
