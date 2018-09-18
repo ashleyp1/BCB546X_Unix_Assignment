@@ -14,7 +14,10 @@ grep -f maize_search.txt fang_et_al_genotypes.txt >> maize_genotypes.txt
 ```
 Add the header back
 ```
-
+head -1 fang_et_al_genotypes.txt > header.txt
+cat header.txt >> proper_maize_genotype.txt
+cat maize_genotypes.txt >> proper_genotype.txt
+```
 
 ```
  awk -f transpose.awk teosinte_genotypes.txt > transposed_teosinte_genotypes.txt
@@ -26,7 +29,7 @@ sort -t . -k1 transposed_teosinte_genotypes.txt > resorted_trans_teosinte_genoty
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3Mzg3OTY0LC0xOTU4NjAyMzcwLDE2Mj
+eyJoaXN0b3J5IjpbMTE1MDYxNjU5LC0xOTU4NjAyMzcwLDE2Mj
 YxNjA0MSwtNzYwODI3OTU4LDMyMDQ5NTM3Miw2NjM1NzI5MjIs
 LTE3Mjc5NzI5MTQsNjEyMjcwNSw5MjY2NDM2NDNdfQ==
 -->
