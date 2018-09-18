@@ -18,12 +18,12 @@ grep ZMM?? fang_et_al_genotypes.txt >> maize_genotypes.txt
 ```
 
 ```
-sort -k1,1 transposed_teosinte_genotypes.txt > sorted_trans_teosinte_genotypes.txt
+sort -t . -k1 transposed_teosinte_genotypes.txt > resorted_trans_teosinte_genotypes.txt
 ```
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNjE2MDQxLC03NjA4Mjc5NTgsMzIwND
-k1MzcyLDY2MzU3MjkyMiwtMTcyNzk3MjkxNCw2MTIyNzA1LDky
-NjY0MzY0M119
+eyJoaXN0b3J5IjpbLTE5NTg2MDIzNzAsMTYyNjE2MDQxLC03Nj
+A4Mjc5NTgsMzIwNDk1MzcyLDY2MzU3MjkyMiwtMTcyNzk3Mjkx
+NCw2MTIyNzA1LDkyNjY0MzY0M119
 -->
