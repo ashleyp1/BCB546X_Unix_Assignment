@@ -18,18 +18,18 @@ head -1 fang_et_al_genotypes.txt > header.txt
 cat header.txt >> proper_maize_genotype.txt
 cat maize_genotypes.txt >> proper_genotype.txt
 ```
-* Transpose
+* Transpose, again do it for both maize and teosinte
 ```
  awk -f transpose.awk proper_teosinte_genotypes.txt > trans_teosinte_geno.txt
 ```
-
+* Sort `snp_positions.txt` `trans_teosinte_geno.txt`
 ```
-sort -t . -k1 transposed_teosinte_genotypes.txt > resorted_trans_teosinte_genotypes.txt
+sort -k1,1 file.txt > sorted_file.txt
 ```
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMzQzNzE0NSwtMTk1ODYwMjM3MCwxNj
+eyJoaXN0b3J5IjpbMTc4NDc3Nzk4NSwtMTk1ODYwMjM3MCwxNj
 I2MTYwNDEsLTc2MDgyNzk1OCwzMjA0OTUzNzIsNjYzNTcyOTIy
 LC0xNzI3OTcyOTE0LDYxMjI3MDUsOTI2NjQzNjQzXX0=
 -->
