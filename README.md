@@ -26,14 +26,14 @@ cat maize_genotypes.txt >> proper_genotype.txt
 ```
 sort -k1,1 file.txt > sorted_file.txt
 ```
-* Join files. Join base on the first column of each file, with the resulting file deliminated by ta
+* Join files. Join based on the first column of each file, with the resulting file delimited by tabs. Repeat with teosinte files.
 ```
 join -1 1 -2 1 -t $'\t' sorted_snp.txt sorted_trans_maize.txt > joined_maize.txt
 ```
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NzMwNTIsLTE5NTg2MDIzNzAsMTYyNj
-E2MDQxLC03NjA4Mjc5NTgsMzIwNDk1MzcyLDY2MzU3MjkyMiwt
-MTcyNzk3MjkxNCw2MTIyNzA1LDkyNjY0MzY0M119
+eyJoaXN0b3J5IjpbMTE0MzY2MjU2MSwtMTk1ODYwMjM3MCwxNj
+I2MTYwNDEsLTc2MDgyNzk1OCwzMjA0OTUzNzIsNjYzNTcyOTIy
+LC0xNzI3OTcyOTE0LDYxMjI3MDUsOTI2NjQzNjQzXX0=
 -->
