@@ -23,7 +23,8 @@ cat maize_genotypes.txt >> proper_genotype.txt
  awk -f transpose.awk proper_teosinte_genotypes.txt > trans_teosinte_geno.txt
 ```
 ```
-head -3 trans_teosinte_geno.txt > head_tra
+head -3 trans_teosinte_geno.txt > head_trans_teosinte_geno.txt
+cat 
 
 
 
@@ -53,9 +54,9 @@ add header
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzMzMzc1NDcsLTE4MjEwNjc4MjcsOD
-UwNTA2OTc1LC0zMDg1MzAyNjAsMTE0MzY2MjU2MSwtMTk1ODYw
-MjM3MCwxNjI2MTYwNDEsLTc2MDgyNzk1OCwzMjA0OTUzNzIsNj
-YzNTcyOTIyLC0xNzI3OTcyOTE0LDYxMjI3MDUsOTI2NjQzNjQz
-XX0=
+eyJoaXN0b3J5IjpbMTA0MzI2MTgzNiwtMTgyMTA2NzgyNyw4NT
+A1MDY5NzUsLTMwODUzMDI2MCwxMTQzNjYyNTYxLC0xOTU4NjAy
+MzcwLDE2MjYxNjA0MSwtNzYwODI3OTU4LDMyMDQ5NTM3Miw2Nj
+M1NzI5MjIsLTE3Mjc5NzI5MTQsNjEyMjcwNSw5MjY2NDM2NDNd
+fQ==
 -->
