@@ -31,9 +31,14 @@ sort -k1,1 file.txt > sorted_file.txt
 join -1 1 -2 1 -t $'\t' sorted_snp.txt sorted_trans_maize.txt > joined_maize.txt
 ```
 
+Sort by chromosome
+```
+awk '{print >> $3"_maize.txt}' joined
+
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0MzY2MjU2MSwtMTk1ODYwMjM3MCwxNj
-I2MTYwNDEsLTc2MDgyNzk1OCwzMjA0OTUzNzIsNjYzNTcyOTIy
-LC0xNzI3OTcyOTE0LDYxMjI3MDUsOTI2NjQzNjQzXX0=
+eyJoaXN0b3J5IjpbLTE0NjAxMTI1MDMsMTE0MzY2MjU2MSwtMT
+k1ODYwMjM3MCwxNjI2MTYwNDEsLTc2MDgyNzk1OCwzMjA0OTUz
+NzIsNjYzNTcyOTIyLC0xNzI3OTcyOTE0LDYxMjI3MDUsOTI2Nj
+QzNjQzXX0=
 -->
