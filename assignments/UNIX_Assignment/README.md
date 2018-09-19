@@ -35,11 +35,15 @@ Sort by chromosome
 ```
 awk '{print >> $3"_maize.txt}' joined_maize.txt
 ```
+sort by chromosome
+add header
+* make chromosome_header.txt
+* 
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwODUzMDI2MCwxMTQzNjYyNTYxLC0xOT
-U4NjAyMzcwLDE2MjYxNjA0MSwtNzYwODI3OTU4LDMyMDQ5NTM3
-Miw2NjM1NzI5MjIsLTE3Mjc5NzI5MTQsNjEyMjcwNSw5MjY2ND
-M2NDNdfQ==
+eyJoaXN0b3J5IjpbMTY5NDMzMjg5LC0zMDg1MzAyNjAsMTE0Mz
+Y2MjU2MSwtMTk1ODYwMjM3MCwxNjI2MTYwNDEsLTc2MDgyNzk1
+OCwzMjA0OTUzNzIsNjYzNTcyOTIyLC0xNzI3OTcyOTE0LDYxMj
+I3MDUsOTI2NjQzNjQzXX0=
 -->
