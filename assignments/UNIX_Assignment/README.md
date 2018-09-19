@@ -22,6 +22,14 @@ cat maize_genotypes.txt >> proper_genotype.txt
 ```
  awk -f transpose.awk proper_teosinte_genotypes.txt > trans_teosinte_geno.txt
 ```
+```
+head -3 trans_teosinte_geno.txt > head_tra
+
+
+
+
+
+
 * Sort `snp_positions.txt`, `trans_teosinte_geno.txt`, and `trans_maize_geno.txt`. Save as sorted versions.
 ```
 sort -k1,1 file.txt > sorted_file.txt
@@ -45,8 +53,9 @@ add header
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjEwNjc4MjcsODUwNTA2OTc1LC0zMD
-g1MzAyNjAsMTE0MzY2MjU2MSwtMTk1ODYwMjM3MCwxNjI2MTYw
-NDEsLTc2MDgyNzk1OCwzMjA0OTUzNzIsNjYzNTcyOTIyLC0xNz
-I3OTcyOTE0LDYxMjI3MDUsOTI2NjQzNjQzXX0=
+eyJoaXN0b3J5IjpbLTEzMzMzMzc1NDcsLTE4MjEwNjc4MjcsOD
+UwNTA2OTc1LC0zMDg1MzAyNjAsMTE0MzY2MjU2MSwtMTk1ODYw
+MjM3MCwxNjI2MTYwNDEsLTc2MDgyNzk1OCwzMjA0OTUzNzIsNj
+YzNTcyOTIyLC0xNzI3OTcyOTE0LDYxMjI3MDUsOTI2NjQzNjQz
+XX0=
 -->
