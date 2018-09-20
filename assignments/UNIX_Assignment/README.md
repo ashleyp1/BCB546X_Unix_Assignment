@@ -47,7 +47,7 @@ awk '{print >> $2"_chromo_maize.txt"}' joined_maize.txt
 ```
 * Sort by position
 ```
-sort -k3,3n 1_chromo_maize.txt > 1_chromo_increasing_maize.txt
+sort -k3,3 -n 1_chromo_maize.txt > 1_chromo_increasing_maize.txt
 sort -k3,3 -n -r 1_chromo_maize.txt > 1_chromo_decreasing_maize.txt
 ```
 * Replace ? with - for decreasing files
@@ -67,11 +67,11 @@ cut -f 1,3-1588 joined_maize_header.txt >> trimmed_maize_header.txt
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMDg5NTc0MywtODc5MjExNTA3LDE1Nj
-cxMjA0MiwxODQ3Mjg3OTQ5LC02ODg2NDIwMjksNzczMzAwMzUy
-LC0yMDg0NjQ5ODg4LC05MTAxMzQwMDEsLTE5MjY1NDM2ODYsLT
-E5NDU2NDA0OTcsMTM0NzYzMjg5MiwxMDIzNjI0NTA5LC02NjI1
-NjQ2NCwxMjIxNzU5NzU4LDE0ODEyNjkxNzYsLTEyMjk4NjQwOD
-gsLTE3OTc2NDMxNzMsLTg4MjUyNDkwNCwtMTgyMTA2NzgyNyw4
-NTA1MDY5NzVdfQ==
+eyJoaXN0b3J5IjpbMTAyMTYzMTI0NCwxMDIwODk1NzQzLC04Nz
+kyMTE1MDcsMTU2NzEyMDQyLDE4NDcyODc5NDksLTY4ODY0MjAy
+OSw3NzMzMDAzNTIsLTIwODQ2NDk4ODgsLTkxMDEzNDAwMSwtMT
+kyNjU0MzY4NiwtMTk0NTY0MDQ5NywxMzQ3NjMyODkyLDEwMjM2
+MjQ1MDksLTY2MjU2NDY0LDEyMjE3NTk3NTgsMTQ4MTI2OTE3Ni
+wtMTIyOTg2NDA4OCwtMTc5NzY0MzE3MywtODgyNTI0OTA0LC0x
+ODIxMDY3ODI3XX0=
 -->
