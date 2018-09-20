@@ -6,7 +6,7 @@ cut -f 1-6 file.txt | column -t | (head -n 5; tail -n 5)
 
 ```
 
-* Move maize data to one folder ( repeat with teosinte replacing maize terms"
+* Move maize data to one folder ( repeat with teosinte replacing maize terms)
 
 ```
 touch maize_search.txt "Contains ZMMIL, ZMMLR, ZMMMR"
@@ -60,9 +60,9 @@ add header
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTc2NDMxNzMsLTg4MjUyNDkwNCwtMT
-gyMTA2NzgyNyw4NTA1MDY5NzUsLTMwODUzMDI2MCwxMTQzNjYy
-NTYxLC0xOTU4NjAyMzcwLDE2MjYxNjA0MSwtNzYwODI3OTU4LD
-MyMDQ5NTM3Miw2NjM1NzI5MjIsLTE3Mjc5NzI5MTQsNjEyMjcw
-NSw5MjY2NDM2NDNdfQ==
+eyJoaXN0b3J5IjpbLTEyMjk4NjQwODgsLTE3OTc2NDMxNzMsLT
+g4MjUyNDkwNCwtMTgyMTA2NzgyNyw4NTA1MDY5NzUsLTMwODUz
+MDI2MCwxMTQzNjYyNTYxLC0xOTU4NjAyMzcwLDE2MjYxNjA0MS
+wtNzYwODI3OTU4LDMyMDQ5NTM3Miw2NjM1NzI5MjIsLTE3Mjc5
+NzI5MTQsNjEyMjcwNSw5MjY2NDM2NDNdfQ==
 -->
