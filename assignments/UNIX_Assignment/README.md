@@ -29,6 +29,7 @@ cat maize_genotypes.txt >> proper_genotype.txt
 * trim snp data
 ```
 cut -f 1,2-3 snp_position.txt >> trimmed_snp_position.txt
+
 ```
 
 * Sort `trimmed_snp_positions.txt`, `trans_teosinte_geno.txt`, and `trans_maize_geno.txt`. Save as sorted versions.
@@ -66,11 +67,11 @@ cut -f 1,3-1588 joined_maize_header.txt >> trimmed_maize_header.txt
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3OTIxMTUwNywxNTY3MTIwNDIsMTg0Nz
-I4Nzk0OSwtNjg4NjQyMDI5LDc3MzMwMDM1MiwtMjA4NDY0OTg4
-OCwtOTEwMTM0MDAxLC0xOTI2NTQzNjg2LC0xOTQ1NjQwNDk3LD
-EzNDc2MzI4OTIsMTAyMzYyNDUwOSwtNjYyNTY0NjQsMTIyMTc1
-OTc1OCwxNDgxMjY5MTc2LC0xMjI5ODY0MDg4LC0xNzk3NjQzMT
-czLC04ODI1MjQ5MDQsLTE4MjEwNjc4MjcsODUwNTA2OTc1LC0z
-MDg1MzAyNjBdfQ==
+eyJoaXN0b3J5IjpbLTE0NDU5MzIzNTcsLTg3OTIxMTUwNywxNT
+Y3MTIwNDIsMTg0NzI4Nzk0OSwtNjg4NjQyMDI5LDc3MzMwMDM1
+MiwtMjA4NDY0OTg4OCwtOTEwMTM0MDAxLC0xOTI2NTQzNjg2LC
+0xOTQ1NjQwNDk3LDEzNDc2MzI4OTIsMTAyMzYyNDUwOSwtNjYy
+NTY0NjQsMTIyMTc1OTc1OCwxNDgxMjY5MTc2LC0xMjI5ODY0MD
+g4LC0xNzk3NjQzMTczLC04ODI1MjQ5MDQsLTE4MjEwNjc4Mjcs
+ODUwNTA2OTc1XX0=
 -->
