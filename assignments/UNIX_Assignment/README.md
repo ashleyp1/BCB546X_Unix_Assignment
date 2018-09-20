@@ -55,7 +55,7 @@ cut -f 1,3-1588 joined_maize.txt >> trimmed_joined_maize.txt
 
 Sort by chromosome
 ```
-awk '{print >> $2"_chromo_maize.txt}' joined_maize.txt
+awk '{print >> $2"_chromo_maize.txt}' trimmedjoined_maize.txt
 ```
 sort by position
 ```
@@ -73,11 +73,11 @@ add header
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDU2NDA0OTcsMTM0NzYzMjg5MiwxMD
-IzNjI0NTA5LC02NjI1NjQ2NCwxMjIxNzU5NzU4LDE0ODEyNjkx
-NzYsLTEyMjk4NjQwODgsLTE3OTc2NDMxNzMsLTg4MjUyNDkwNC
-wtMTgyMTA2NzgyNyw4NTA1MDY5NzUsLTMwODUzMDI2MCwxMTQz
-NjYyNTYxLC0xOTU4NjAyMzcwLDE2MjYxNjA0MSwtNzYwODI3OT
-U4LDMyMDQ5NTM3Miw2NjM1NzI5MjIsLTE3Mjc5NzI5MTQsNjEy
-MjcwNV19
+eyJoaXN0b3J5IjpbLTg1Nzc0MDQ5MSwtMTk0NTY0MDQ5NywxMz
+Q3NjMyODkyLDEwMjM2MjQ1MDksLTY2MjU2NDY0LDEyMjE3NTk3
+NTgsMTQ4MTI2OTE3NiwtMTIyOTg2NDA4OCwtMTc5NzY0MzE3My
+wtODgyNTI0OTA0LC0xODIxMDY3ODI3LDg1MDUwNjk3NSwtMzA4
+NTMwMjYwLDExNDM2NjI1NjEsLTE5NTg2MDIzNzAsMTYyNjE2MD
+QxLC03NjA4Mjc5NTgsMzIwNDk1MzcyLDY2MzU3MjkyMiwtMTcy
+Nzk3MjkxNF19
 -->
