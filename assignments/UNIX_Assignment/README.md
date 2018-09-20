@@ -22,7 +22,7 @@ cat maize_genotypes.txt >> proper_genotype.txt
 ```
  awk -f transpose.awk proper_teosinte_genotypes.txt > trans_teosinte_geno.txt
 ```
-#### probably unnecessary
+### skip
 ```
 head -3 trans_teosinte_geno.txt > head_trans_teosinte_geno.txt
 cat head_trans_teosinte_geno,txt >> head_sorted_trans_teosinte.txt
@@ -30,7 +30,7 @@ cat sorted_trans_teosinte.txt >> head_sorted_trans_teosinte.txt
 sort -k1,1 head_sorted_trans_teosinte.txt > head_sorted_trans_teosinte_2.txt
 join...
 ```
-#### end skip
+###end skip
 
 
 
@@ -67,9 +67,10 @@ add header
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MTI2OTE3NiwtMTIyOTg2NDA4OCwtMT
-c5NzY0MzE3MywtODgyNTI0OTA0LC0xODIxMDY3ODI3LDg1MDUw
-Njk3NSwtMzA4NTMwMjYwLDExNDM2NjI1NjEsLTE5NTg2MDIzNz
-AsMTYyNjE2MDQxLC03NjA4Mjc5NTgsMzIwNDk1MzcyLDY2MzU3
-MjkyMiwtMTcyNzk3MjkxNCw2MTIyNzA1LDkyNjY0MzY0M119
+eyJoaXN0b3J5IjpbLTMwMzQwNTQ4LDE0ODEyNjkxNzYsLTEyMj
+k4NjQwODgsLTE3OTc2NDMxNzMsLTg4MjUyNDkwNCwtMTgyMTA2
+NzgyNyw4NTA1MDY5NzUsLTMwODUzMDI2MCwxMTQzNjYyNTYxLC
+0xOTU4NjAyMzcwLDE2MjYxNjA0MSwtNzYwODI3OTU4LDMyMDQ5
+NTM3Miw2NjM1NzI5MjIsLTE3Mjc5NzI5MTQsNjEyMjcwNSw5Mj
+Y2NDM2NDNdfQ==
 -->
