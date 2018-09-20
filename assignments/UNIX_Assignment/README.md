@@ -28,7 +28,7 @@ cat maize_genotypes.txt >> proper_genotype.txt
 
 * trim snp data
 ```
-cut -f 1,3-4 snp_position.txt >> trimmed_snp_position.txt
+cut -f 1,3,4 snp_position.txt >> trimmed_snp_position.txt
 head -1 trimmed_snp_position.txt > snp_header.txt
 ```
 
@@ -67,7 +67,7 @@ cut -f 1,3-1588 joined_maize_header.txt >> trimmed_maize_header.txt
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMDg4NDE2MCwtODc5MjExNTA3LDE1Nj
+eyJoaXN0b3J5IjpbMTAyMDg5NTc0MywtODc5MjExNTA3LDE1Nj
 cxMjA0MiwxODQ3Mjg3OTQ5LC02ODg2NDIwMjksNzczMzAwMzUy
 LC0yMDg0NjQ5ODg4LC05MTAxMzQwMDEsLTE5MjY1NDM2ODYsLT
 E5NDU2NDA0OTcsMTM0NzYzMjg5MiwxMDIzNjI0NTA5LC02NjI1
