@@ -48,17 +48,18 @@ join -1 1 -2 1 -t $'\t' sorted_snp.txt sorted_trans_maize.txt > joined_maize.txt
 * trim out second column (mdv id)
 ```
 awk -f "\t" '{print NF; exit}' joined_maize.txt
+	output shows 1588
 cut -f 1,3-1588 joined_maize.txt >> trimmed_joined_maize.txt
 ```
 
 
 Sort by chromosome
 ```
-awk '{print >> $3"_maize.txt}' joined_maize.txt
+awk '{print >> $3"_chromo_maize.txt}' joined_maize.txt
 ```
-sort by chromosome
+sort by position
 ```
-
+sort -k3,3n 1_chromo
 ```
 add header
 * make chromosome_header.txt
@@ -66,10 +67,10 @@ add header
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMTc1OTc1OCwxNDgxMjY5MTc2LC0xMj
-I5ODY0MDg4LC0xNzk3NjQzMTczLC04ODI1MjQ5MDQsLTE4MjEw
-Njc4MjcsODUwNTA2OTc1LC0zMDg1MzAyNjAsMTE0MzY2MjU2MS
-wtMTk1ODYwMjM3MCwxNjI2MTYwNDEsLTc2MDgyNzk1OCwzMjA0
-OTUzNzIsNjYzNTcyOTIyLC0xNzI3OTcyOTE0LDYxMjI3MDUsOT
-I2NjQzNjQzXX0=
+eyJoaXN0b3J5IjpbLTQyNTIzNjg0MywxMjIxNzU5NzU4LDE0OD
+EyNjkxNzYsLTEyMjk4NjQwODgsLTE3OTc2NDMxNzMsLTg4MjUy
+NDkwNCwtMTgyMTA2NzgyNyw4NTA1MDY5NzUsLTMwODUzMDI2MC
+wxMTQzNjYyNTYxLC0xOTU4NjAyMzcwLDE2MjYxNjA0MSwtNzYw
+ODI3OTU4LDMyMDQ5NTM3Miw2NjM1NzI5MjIsLTE3Mjc5NzI5MT
+QsNjEyMjcwNSw5MjY2NDM2NDNdfQ==
 -->
