@@ -58,15 +58,18 @@ sed -i 's/?/-/g' 1_chromo_decreasing_maize.txt
 ```
 
 add header
-* make chromosome_header.txt
-* append to new files
+```
+head -1 snp_position.txt > snp_header.txt
+head -1 trans_maize_geno.txt > trans_maize_header.txt
+join -1 1 -2 1
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzczMzAwMzUyLC0yMDg0NjQ5ODg4LC05MT
-AxMzQwMDEsLTE5MjY1NDM2ODYsLTE5NDU2NDA0OTcsMTM0NzYz
-Mjg5MiwxMDIzNjI0NTA5LC02NjI1NjQ2NCwxMjIxNzU5NzU4LD
-E0ODEyNjkxNzYsLTEyMjk4NjQwODgsLTE3OTc2NDMxNzMsLTg4
-MjUyNDkwNCwtMTgyMTA2NzgyNyw4NTA1MDY5NzUsLTMwODUzMD
-I2MCwxMTQzNjYyNTYxLC0xOTU4NjAyMzcwLDE2MjYxNjA0MSwt
-NzYwODI3OTU4XX0=
+eyJoaXN0b3J5IjpbLTIyMDQzNDczMyw3NzMzMDAzNTIsLTIwOD
+Q2NDk4ODgsLTkxMDEzNDAwMSwtMTkyNjU0MzY4NiwtMTk0NTY0
+MDQ5NywxMzQ3NjMyODkyLDEwMjM2MjQ1MDksLTY2MjU2NDY0LD
+EyMjE3NTk3NTgsMTQ4MTI2OTE3NiwtMTIyOTg2NDA4OCwtMTc5
+NzY0MzE3MywtODgyNTI0OTA0LC0xODIxMDY3ODI3LDg1MDUwNj
+k3NSwtMzA4NTMwMjYwLDExNDM2NjI1NjEsLTE5NTg2MDIzNzAs
+MTYyNjE2MDQxXX0=
 -->
