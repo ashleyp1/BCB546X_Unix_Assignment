@@ -61,12 +61,15 @@ add header
 ```
 head -1 snp_position.txt > snp_header.txt
 head -1 trans_maize_geno.txt > trans_maize_header.txt
-join -1 1 -2 1 -t $'\t' --header snp_header.txt trans_maize_header.txt > joined_maize_header.txt
+join -1 1 -2 1 -t $'\t' --header snp_header.txt trans_maize_header.txt > joined_maize_header.txt\
+awk -F "\t" '{print NF; exit}' joined_maize_header.txt
+	output shows 1588
+cut -f 1,3-1588 joined_maize.txt >> trimmed_maize_header.txt
 
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMTAzODA5LDc3MzMwMDM1MiwtMjA4ND
+eyJoaXN0b3J5IjpbOTIwMDc2NTcxLDc3MzMwMDM1MiwtMjA4ND
 Y0OTg4OCwtOTEwMTM0MDAxLC0xOTI2NTQzNjg2LC0xOTQ1NjQw
 NDk3LDEzNDc2MzI4OTIsMTAyMzYyNDUwOSwtNjYyNTY0NjQsMT
 IyMTc1OTc1OCwxNDgxMjY5MTc2LC0xMjI5ODY0MDg4LC0xNzk3
