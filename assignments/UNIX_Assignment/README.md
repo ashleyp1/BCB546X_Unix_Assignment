@@ -28,8 +28,6 @@ cat maize_genotypes.txt >> proper_genotype.txt
 
 * trim snp data
 ```
-awk -F "\t" '{print NF; exit}' joined_maize.txt
-	output shows 1588
 cut -f 1,2-3 joined_maize.txt >> trimmed_joined_maize.txt
 ```
 
@@ -68,11 +66,11 @@ cut -f 1,3-1588 joined_maize_header.txt >> trimmed_maize_header.txt
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDEwNzgxOTksMTg0NzI4Nzk0OSwtNj
-g4NjQyMDI5LDc3MzMwMDM1MiwtMjA4NDY0OTg4OCwtOTEwMTM0
-MDAxLC0xOTI2NTQzNjg2LC0xOTQ1NjQwNDk3LDEzNDc2MzI4OT
-IsMTAyMzYyNDUwOSwtNjYyNTY0NjQsMTIyMTc1OTc1OCwxNDgx
-MjY5MTc2LC0xMjI5ODY0MDg4LC0xNzk3NjQzMTczLC04ODI1Mj
-Q5MDQsLTE4MjEwNjc4MjcsODUwNTA2OTc1LC0zMDg1MzAyNjAs
-MTE0MzY2MjU2MV19
+eyJoaXN0b3J5IjpbMTU2NzEyMDQyLDE4NDcyODc5NDksLTY4OD
+Y0MjAyOSw3NzMzMDAzNTIsLTIwODQ2NDk4ODgsLTkxMDEzNDAw
+MSwtMTkyNjU0MzY4NiwtMTk0NTY0MDQ5NywxMzQ3NjMyODkyLD
+EwMjM2MjQ1MDksLTY2MjU2NDY0LDEyMjE3NTk3NTgsMTQ4MTI2
+OTE3NiwtMTIyOTg2NDA4OCwtMTc5NzY0MzE3MywtODgyNTI0OT
+A0LC0xODIxMDY3ODI3LDg1MDUwNjk3NSwtMzA4NTMwMjYwLDEx
+NDM2NjI1NjFdfQ==
 -->
