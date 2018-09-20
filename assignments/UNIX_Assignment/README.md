@@ -9,7 +9,8 @@ cut -f 1-6 file.txt | column -t | (head -n 5; tail -n 5)
 * Move maize data to one folder ( repeat with teosinte replacing maize terms)
 
 ```
-touch maize_search.txt "Contains ZMMIL, ZMMLR, ZMMMR"
+touch maize_search.txt 
+#Write ZMMIL	ZMMLR	ZMMMR tab delimited
 grep -f maize_search.txt fang_et_al_genotypes.txt >> maize_genotypes.txt
 ```
 * Add the header back, required for sorting later on. Repeat for teosinte.
@@ -20,21 +21,8 @@ cat maize_genotypes.txt >> proper_genotype.txt
 ```
 * Transpose, again do it for both maize and teosinte
 ```
- awk -f transpose.awk proper_teosinte_genotypes.txt > trans_teosinte_geno.txt
+ awk -f transpose.awk proper_maize_genotypes.txt > trans_maize_geno.txt
 ```
-### skip
-```
-head -3 trans_teosinte_geno.txt > head_trans_teosinte_geno.txt
-cat head_trans_teosinte_geno,txt >> head_sorted_trans_teosinte.txt
-cat sorted_trans_teosinte.txt >> head_sorted_trans_teosinte.txt
-sort -k1,1 head_sorted_trans_teosinte.txt > head_sorted_trans_teosinte_2.txt
-join...
-```
-###  end skip
-
-
-
-
 
 * Sort `snp_positions.txt`, `trans_teosinte_geno.txt`, and `trans_maize_geno.txt`. Save as sorted versions.
 ```
@@ -53,11 +41,11 @@ cut -f 1,3-1588 joined_maize.txt >> trimmed_joined_maize.txt
 ```
 
 
-Sort by chromosome
+* Sort by chromosome
 ```
 awk '{print >> $2"_chromo_maize.txt}' trimmed_joined_maize.txt
 ```
-sort by position
+* Sort by position
 ```
 sort -k3,3n 1_chromo_maize.txt > 1_chromo_increasing_maize.txt
 sort -k3,3 -n -r 1_chromo_maize.txt > 1_chromo_decreasing_maize.txt
@@ -73,11 +61,11 @@ add header
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjY1NDM2ODYsLTE5NDU2NDA0OTcsMT
-M0NzYzMjg5MiwxMDIzNjI0NTA5LC02NjI1NjQ2NCwxMjIxNzU5
-NzU4LDE0ODEyNjkxNzYsLTEyMjk4NjQwODgsLTE3OTc2NDMxNz
-MsLTg4MjUyNDkwNCwtMTgyMTA2NzgyNyw4NTA1MDY5NzUsLTMw
-ODUzMDI2MCwxMTQzNjYyNTYxLC0xOTU4NjAyMzcwLDE2MjYxNj
-A0MSwtNzYwODI3OTU4LDMyMDQ5NTM3Miw2NjM1NzI5MjIsLTE3
-Mjc5NzI5MTRdfQ==
+eyJoaXN0b3J5IjpbLTE4NTE1MzI4MjUsLTE5MjY1NDM2ODYsLT
+E5NDU2NDA0OTcsMTM0NzYzMjg5MiwxMDIzNjI0NTA5LC02NjI1
+NjQ2NCwxMjIxNzU5NzU4LDE0ODEyNjkxNzYsLTEyMjk4NjQwOD
+gsLTE3OTc2NDMxNzMsLTg4MjUyNDkwNCwtMTgyMTA2NzgyNyw4
+NTA1MDY5NzUsLTMwODUzMDI2MCwxMTQzNjYyNTYxLC0xOTU4Nj
+AyMzcwLDE2MjYxNjA0MSwtNzYwODI3OTU4LDMyMDQ5NTM3Miw2
+NjM1NzI5MjJdfQ==
 -->
