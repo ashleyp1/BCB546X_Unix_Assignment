@@ -22,7 +22,7 @@ cat maize_genotypes.txt >> proper_genotype.txt
 ```
  awk -f transpose.awk proper_teosinte_genotypes.txt > trans_teosinte_geno.txt
 ```
-#### probably unnecessary
+### skip
 ```
 head -3 trans_teosinte_geno.txt > head_trans_teosinte_geno.txt
 cat head_trans_teosinte_geno,txt >> head_sorted_trans_teosinte.txt
@@ -30,8 +30,7 @@ cat sorted_trans_teosinte.txt >> head_sorted_trans_teosinte.txt
 sort -k1,1 head_sorted_trans_teosinte.txt > head_sorted_trans_teosinte_2.txt
 join...
 ```
-#### end skip
-
+###  end skip
 
 
 
@@ -49,17 +48,19 @@ join -1 1 -2 1 -t $'\t' sorted_snp.txt sorted_trans_maize.txt > joined_maize.txt
 * trim out second column (mdv id)
 ```
 awk -f "\t" '{print NF; exit}' joined_maize.txt
+	output shows 1588
 cut -f 1,3-1588 joined_maize.txt >> trimmed_joined_maize.txt
 ```
 
 
 Sort by chromosome
 ```
-awk '{print >> $3"_maize.txt}' joined_maize.txt
+awk '{print >> $3"_chromo_maize.txt}' joined_maize.txt
 ```
-sort by chromosome
+sort by position
 ```
-
+sort -k3,3n 1_chromo_maize.txt > 1_chromo_increasing_maize.txt
+sort -k3,3 -n -r 1_chromo_maize.txt > 1_chromo_decreasing_maize.txt
 ```
 add header
 * make chromosome_header.txt
@@ -67,9 +68,10 @@ add header
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MTI2OTE3NiwtMTIyOTg2NDA4OCwtMT
-c5NzY0MzE3MywtODgyNTI0OTA0LC0xODIxMDY3ODI3LDg1MDUw
-Njk3NSwtMzA4NTMwMjYwLDExNDM2NjI1NjEsLTE5NTg2MDIzNz
-AsMTYyNjE2MDQxLC03NjA4Mjc5NTgsMzIwNDk1MzcyLDY2MzU3
-MjkyMiwtMTcyNzk3MjkxNCw2MTIyNzA1LDkyNjY0MzY0M119
+eyJoaXN0b3J5IjpbMTAyMzYyNDUwOSwtNjYyNTY0NjQsMTIyMT
+c1OTc1OCwxNDgxMjY5MTc2LC0xMjI5ODY0MDg4LC0xNzk3NjQz
+MTczLC04ODI1MjQ5MDQsLTE4MjEwNjc4MjcsODUwNTA2OTc1LC
+0zMDg1MzAyNjAsMTE0MzY2MjU2MSwtMTk1ODYwMjM3MCwxNjI2
+MTYwNDEsLTc2MDgyNzk1OCwzMjA0OTUzNzIsNjYzNTcyOTIyLC
+0xNzI3OTcyOTE0LDYxMjI3MDUsOTI2NjQzNjQzXX0=
 -->
