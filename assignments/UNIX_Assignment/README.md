@@ -62,17 +62,19 @@ sort by position
 sort -k3,3n 1_chromo_maize.txt > 1_chromo_increasing_maize.txt
 sort -k3,3 -n -r 1_chromo_maize.txt > 1_chromo_decreasing_maize.txt
 ```
+replac
+
 add header
 * make chromosome_header.txt
 * append to new files
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NzYzMjg5MiwxMDIzNjI0NTA5LC02Nj
-I1NjQ2NCwxMjIxNzU5NzU4LDE0ODEyNjkxNzYsLTEyMjk4NjQw
-ODgsLTE3OTc2NDMxNzMsLTg4MjUyNDkwNCwtMTgyMTA2NzgyNy
-w4NTA1MDY5NzUsLTMwODUzMDI2MCwxMTQzNjYyNTYxLC0xOTU4
-NjAyMzcwLDE2MjYxNjA0MSwtNzYwODI3OTU4LDMyMDQ5NTM3Mi
-w2NjM1NzI5MjIsLTE3Mjc5NzI5MTQsNjEyMjcwNSw5MjY2NDM2
-NDNdfQ==
+eyJoaXN0b3J5IjpbMTM5MDkwNzM3NywxMzQ3NjMyODkyLDEwMj
+M2MjQ1MDksLTY2MjU2NDY0LDEyMjE3NTk3NTgsMTQ4MTI2OTE3
+NiwtMTIyOTg2NDA4OCwtMTc5NzY0MzE3MywtODgyNTI0OTA0LC
+0xODIxMDY3ODI3LDg1MDUwNjk3NSwtMzA4NTMwMjYwLDExNDM2
+NjI1NjEsLTE5NTg2MDIzNzAsMTYyNjE2MDQxLC03NjA4Mjc5NT
+gsMzIwNDk1MzcyLDY2MzU3MjkyMiwtMTcyNzk3MjkxNCw2MTIy
+NzA1XX0=
 -->
