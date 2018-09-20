@@ -46,6 +46,10 @@ sort -k1,1 file.txt > sorted_file.txt
 join -1 1 -2 1 -t $'\t' sorted_snp.txt sorted_trans_maize.txt > joined_maize.txt
 ```
 
+* trim out second column (mdv id)
+```
+cut -f 
+```
 
 
 Sort by chromosome
@@ -62,7 +66,7 @@ add header
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4Njk3Mzk0MCwtMTIyOTg2NDA4OCwtMT
+eyJoaXN0b3J5IjpbMTEzNDExNDU5OCwtMTIyOTg2NDA4OCwtMT
 c5NzY0MzE3MywtODgyNTI0OTA0LC0xODIxMDY3ODI3LDg1MDUw
 Njk3NSwtMzA4NTMwMjYwLDExNDM2NjI1NjEsLTE5NTg2MDIzNz
 AsMTYyNjE2MDQxLC03NjA4Mjc5NTgsMzIwNDk1MzcyLDY2MzU3
