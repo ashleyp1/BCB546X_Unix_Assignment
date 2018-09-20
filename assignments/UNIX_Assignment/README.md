@@ -26,6 +26,13 @@ cat maize_genotypes.txt >> proper_genotype.txt
  awk -f transpose.awk proper_maize_genotypes.txt > trans_maize_geno.txt
 ```
 
+* trim snp data
+```
+awk -F "\t" '{print NF; exit}' joined_maize.txt
+	output shows 1588
+cut -f 1,2-3 joined_maize.txt >> trimmed_joined_maize.txt
+```
+
 * Sort `snp_positions.txt`, `trans_teosinte_geno.txt`, and `trans_maize_geno.txt`. Save as sorted versions.
 ```
 sort -k1,1 file.txt > sorted_file.txt
@@ -34,14 +41,6 @@ sort -k1,1 file.txt > sorted_file.txt
 ```
 join -1 1 -2 1 -t $'\t' sorted_snp.txt sorted_trans_maize.txt > joined_maize.txt
 ```
-
-* trim out second column (mdv id)
-```
-awk -F "\t" '{print NF; exit}' joined_maize.txt
-	output shows 1588
-cut -f 1,3-1588 joined_maize.txt >> trimmed_joined_maize.txt
-```
-
 
 * Sort by chromosome
 ```
@@ -69,11 +68,11 @@ cut -f 1,3-1588 joined_maize_header.txt >> trimmed_maize_header.txt
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0NzI4Nzk0OSwtNjg4NjQyMDI5LDc3Mz
-MwMDM1MiwtMjA4NDY0OTg4OCwtOTEwMTM0MDAxLC0xOTI2NTQz
-Njg2LC0xOTQ1NjQwNDk3LDEzNDc2MzI4OTIsMTAyMzYyNDUwOS
-wtNjYyNTY0NjQsMTIyMTc1OTc1OCwxNDgxMjY5MTc2LC0xMjI5
-ODY0MDg4LC0xNzk3NjQzMTczLC04ODI1MjQ5MDQsLTE4MjEwNj
-c4MjcsODUwNTA2OTc1LC0zMDg1MzAyNjAsMTE0MzY2MjU2MSwt
-MTk1ODYwMjM3MF19
+eyJoaXN0b3J5IjpbLTEzMDEwNzgxOTksMTg0NzI4Nzk0OSwtNj
+g4NjQyMDI5LDc3MzMwMDM1MiwtMjA4NDY0OTg4OCwtOTEwMTM0
+MDAxLC0xOTI2NTQzNjg2LC0xOTQ1NjQwNDk3LDEzNDc2MzI4OT
+IsMTAyMzYyNDUwOSwtNjYyNTY0NjQsMTIyMTc1OTc1OCwxNDgx
+MjY5MTc2LC0xMjI5ODY0MDg4LC0xNzk3NjQzMTczLC04ODI1Mj
+Q5MDQsLTE4MjEwNjc4MjcsODUwNTA2OTc1LC0zMDg1MzAyNjAs
+MTE0MzY2MjU2MV19
 -->
