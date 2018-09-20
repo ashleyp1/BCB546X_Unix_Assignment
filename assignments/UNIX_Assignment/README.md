@@ -1,11 +1,12 @@
 # BCB546X_Unix_Assignment
+## Inspecting the Data
 * Inspect the files `fang_et_al_genotypes.txt` and `snp_position.txt`
 
 ```
 cut -f 1-6 file.txt | column -t | (head -n 5; tail -n 5)
 
 ```
-
+## Processing the Data
 * Move maize data to one folder ( repeat with teosinte replacing maize terms)
 
 ```
@@ -60,13 +61,12 @@ add header
 * make chromosome_header.txt
 * append to new files
 
-## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMDEzNDAwMSwtMTkyNjU0MzY4NiwtMT
-k0NTY0MDQ5NywxMzQ3NjMyODkyLDEwMjM2MjQ1MDksLTY2MjU2
-NDY0LDEyMjE3NTk3NTgsMTQ4MTI2OTE3NiwtMTIyOTg2NDA4OC
-wtMTc5NzY0MzE3MywtODgyNTI0OTA0LC0xODIxMDY3ODI3LDg1
-MDUwNjk3NSwtMzA4NTMwMjYwLDExNDM2NjI1NjEsLTE5NTg2MD
-IzNzAsMTYyNjE2MDQxLC03NjA4Mjc5NTgsMzIwNDk1MzcyLDY2
-MzU3MjkyMl19
+eyJoaXN0b3J5IjpbLTIwODQ2NDk4ODgsLTkxMDEzNDAwMSwtMT
+kyNjU0MzY4NiwtMTk0NTY0MDQ5NywxMzQ3NjMyODkyLDEwMjM2
+MjQ1MDksLTY2MjU2NDY0LDEyMjE3NTk3NTgsMTQ4MTI2OTE3Ni
+wtMTIyOTg2NDA4OCwtMTc5NzY0MzE3MywtODgyNTI0OTA0LC0x
+ODIxMDY3ODI3LDg1MDUwNjk3NSwtMzA4NTMwMjYwLDExNDM2Nj
+I1NjEsLTE5NTg2MDIzNzAsMTYyNjE2MDQxLC03NjA4Mjc5NTgs
+MzIwNDk1MzcyXX0=
 -->
