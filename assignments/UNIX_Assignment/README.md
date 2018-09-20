@@ -10,7 +10,8 @@ cut -f 1-6 file.txt | column -t | (head -n 5; tail -n 5)
 
 ```
 touch maize_search.txt 
-#Write ZMMIL	ZMMLR	ZMMMR tab delimited
+vi maize_search.txt
+#Write and save ZMMIL, ZMMLR, ZMMMR
 grep -f maize_search.txt fang_et_al_genotypes.txt >> maize_genotypes.txt
 ```
 * Add the header back, required for sorting later on. Repeat for teosinte.
@@ -61,11 +62,11 @@ add header
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTE1MzI4MjUsLTE5MjY1NDM2ODYsLT
-E5NDU2NDA0OTcsMTM0NzYzMjg5MiwxMDIzNjI0NTA5LC02NjI1
-NjQ2NCwxMjIxNzU5NzU4LDE0ODEyNjkxNzYsLTEyMjk4NjQwOD
-gsLTE3OTc2NDMxNzMsLTg4MjUyNDkwNCwtMTgyMTA2NzgyNyw4
-NTA1MDY5NzUsLTMwODUzMDI2MCwxMTQzNjYyNTYxLC0xOTU4Nj
-AyMzcwLDE2MjYxNjA0MSwtNzYwODI3OTU4LDMyMDQ5NTM3Miw2
-NjM1NzI5MjJdfQ==
+eyJoaXN0b3J5IjpbLTkxMDEzNDAwMSwtMTkyNjU0MzY4NiwtMT
+k0NTY0MDQ5NywxMzQ3NjMyODkyLDEwMjM2MjQ1MDksLTY2MjU2
+NDY0LDEyMjE3NTk3NTgsMTQ4MTI2OTE3NiwtMTIyOTg2NDA4OC
+wtMTc5NzY0MzE3MywtODgyNTI0OTA0LC0xODIxMDY3ODI3LDg1
+MDUwNjk3NSwtMzA4NTMwMjYwLDExNDM2NjI1NjEsLTE5NTg2MD
+IzNzAsMTYyNjE2MDQxLC03NjA4Mjc5NTgsMzIwNDk1MzcyLDY2
+MzU3MjkyMl19
 -->
