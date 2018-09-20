@@ -55,23 +55,29 @@ cut -f 1,3-1588 joined_maize.txt >> trimmed_joined_maize.txt
 
 Sort by chromosome
 ```
-awk '{print >> $3"_chromo_maize.txt}' joined_maize.txt
+awk '{print >> $2"_chromo_maize.txt}' joined_maize.txt
 ```
 sort by position
 ```
 sort -k3,3n 1_chromo_maize.txt > 1_chromo_increasing_maize.txt
 sort -k3,3 -n -r 1_chromo_maize.txt > 1_chromo_decreasing_maize.txt
 ```
+* Replace ? with - for decreasing files
+```
+sed -i 's/?/-/g' 1_chromo_decreasing_maize.txt
+```
+
 add header
 * make chromosome_header.txt
 * append to new files
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMzYyNDUwOSwtNjYyNTY0NjQsMTIyMT
-c1OTc1OCwxNDgxMjY5MTc2LC0xMjI5ODY0MDg4LC0xNzk3NjQz
-MTczLC04ODI1MjQ5MDQsLTE4MjEwNjc4MjcsODUwNTA2OTc1LC
-0zMDg1MzAyNjAsMTE0MzY2MjU2MSwtMTk1ODYwMjM3MCwxNjI2
-MTYwNDEsLTc2MDgyNzk1OCwzMjA0OTUzNzIsNjYzNTcyOTIyLC
-0xNzI3OTcyOTE0LDYxMjI3MDUsOTI2NjQzNjQzXX0=
+eyJoaXN0b3J5IjpbLTE5NDU2NDA0OTcsMTM0NzYzMjg5MiwxMD
+IzNjI0NTA5LC02NjI1NjQ2NCwxMjIxNzU5NzU4LDE0ODEyNjkx
+NzYsLTEyMjk4NjQwODgsLTE3OTc2NDMxNzMsLTg4MjUyNDkwNC
+wtMTgyMTA2NzgyNyw4NTA1MDY5NzUsLTMwODUzMDI2MCwxMTQz
+NjYyNTYxLC0xOTU4NjAyMzcwLDE2MjYxNjA0MSwtNzYwODI3OT
+U4LDMyMDQ5NTM3Miw2NjM1NzI5MjIsLTE3Mjc5NzI5MTQsNjEy
+MjcwNV19
 -->
