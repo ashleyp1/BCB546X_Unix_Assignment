@@ -30,8 +30,7 @@ cat sorted_trans_teosinte.txt >> head_sorted_trans_teosinte.txt
 sort -k1,1 head_sorted_trans_teosinte.txt > head_sorted_trans_teosinte_2.txt
 join...
 ```
-###end skip
-
+###  end skip
 
 
 
@@ -67,10 +66,10 @@ add header
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMzQwNTQ4LDE0ODEyNjkxNzYsLTEyMj
-k4NjQwODgsLTE3OTc2NDMxNzMsLTg4MjUyNDkwNCwtMTgyMTA2
-NzgyNyw4NTA1MDY5NzUsLTMwODUzMDI2MCwxMTQzNjYyNTYxLC
-0xOTU4NjAyMzcwLDE2MjYxNjA0MSwtNzYwODI3OTU4LDMyMDQ5
-NTM3Miw2NjM1NzI5MjIsLTE3Mjc5NzI5MTQsNjEyMjcwNSw5Mj
-Y2NDM2NDNdfQ==
+eyJoaXN0b3J5IjpbMTIyMTc1OTc1OCwxNDgxMjY5MTc2LC0xMj
+I5ODY0MDg4LC0xNzk3NjQzMTczLC04ODI1MjQ5MDQsLTE4MjEw
+Njc4MjcsODUwNTA2OTc1LC0zMDg1MzAyNjAsMTE0MzY2MjU2MS
+wtMTk1ODYwMjM3MCwxNjI2MTYwNDEsLTc2MDgyNzk1OCwzMjA0
+OTUzNzIsNjYzNTcyOTIyLC0xNzI3OTcyOTE0LDYxMjI3MDUsOT
+I2NjQzNjQzXX0=
 -->
