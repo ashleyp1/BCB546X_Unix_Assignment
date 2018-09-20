@@ -52,7 +52,7 @@ sort -k3,3 -n -r 1_chromo_maize.txt > 1_chromo_decreasing_maize.txt
 ```
 * Replace ? with - for decreasing files
 ```
-sed -i 's/?/-/g' 1_chromo_decreasing_maize.txt
+sed -i 's/\?/-/g' 1_chromo_decreasing_maize.txt
 ```
 
 add header
@@ -67,11 +67,11 @@ cut -f 1,3-1588 joined_maize_header.txt >> trimmed_maize_header.txt
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMTg3MDA4LC04NzkyMTE1MDcsMTU2Nz
-EyMDQyLDE4NDcyODc5NDksLTY4ODY0MjAyOSw3NzMzMDAzNTIs
-LTIwODQ2NDk4ODgsLTkxMDEzNDAwMSwtMTkyNjU0MzY4NiwtMT
-k0NTY0MDQ5NywxMzQ3NjMyODkyLDEwMjM2MjQ1MDksLTY2MjU2
-NDY0LDEyMjE3NTk3NTgsMTQ4MTI2OTE3NiwtMTIyOTg2NDA4OC
-wtMTc5NzY0MzE3MywtODgyNTI0OTA0LC0xODIxMDY3ODI3LDg1
-MDUwNjk3NV19
+eyJoaXN0b3J5IjpbLTgwMTM0NjU2MCwtODc5MjExNTA3LDE1Nj
+cxMjA0MiwxODQ3Mjg3OTQ5LC02ODg2NDIwMjksNzczMzAwMzUy
+LC0yMDg0NjQ5ODg4LC05MTAxMzQwMDEsLTE5MjY1NDM2ODYsLT
+E5NDU2NDA0OTcsMTM0NzYzMjg5MiwxMDIzNjI0NTA5LC02NjI1
+NjQ2NCwxMjIxNzU5NzU4LDE0ODEyNjkxNzYsLTEyMjk4NjQwOD
+gsLTE3OTc2NDMxNzMsLTg4MjUyNDkwNCwtMTgyMTA2NzgyNyw4
+NTA1MDY5NzVdfQ==
 -->
