@@ -37,7 +37,7 @@ join -1 1 -2 1 -t $'\t' sorted_snp.txt sorted_trans_maize.txt > joined_maize.txt
 
 * trim out second column (mdv id)
 ```
-awk -f "\t" '{print NF; exit}' joined_maize.txt
+awk -F "\t" '{print NF; exit}' joined_maize.txt
 	output shows 1588
 cut -f 1,3-1588 joined_maize.txt >> trimmed_joined_maize.txt
 ```
@@ -62,11 +62,11 @@ add header
 * append to new files
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODQ2NDk4ODgsLTkxMDEzNDAwMSwtMT
-kyNjU0MzY4NiwtMTk0NTY0MDQ5NywxMzQ3NjMyODkyLDEwMjM2
-MjQ1MDksLTY2MjU2NDY0LDEyMjE3NTk3NTgsMTQ4MTI2OTE3Ni
-wtMTIyOTg2NDA4OCwtMTc5NzY0MzE3MywtODgyNTI0OTA0LC0x
-ODIxMDY3ODI3LDg1MDUwNjk3NSwtMzA4NTMwMjYwLDExNDM2Nj
-I1NjEsLTE5NTg2MDIzNzAsMTYyNjE2MDQxLC03NjA4Mjc5NTgs
-MzIwNDk1MzcyXX0=
+eyJoaXN0b3J5IjpbNzczMzAwMzUyLC0yMDg0NjQ5ODg4LC05MT
+AxMzQwMDEsLTE5MjY1NDM2ODYsLTE5NDU2NDA0OTcsMTM0NzYz
+Mjg5MiwxMDIzNjI0NTA5LC02NjI1NjQ2NCwxMjIxNzU5NzU4LD
+E0ODEyNjkxNzYsLTEyMjk4NjQwODgsLTE3OTc2NDMxNzMsLTg4
+MjUyNDkwNCwtMTgyMTA2NzgyNyw4NTA1MDY5NzUsLTMwODUzMD
+I2MCwxMTQzNjYyNTYxLC0xOTU4NjAyMzcwLDE2MjYxNjA0MSwt
+NzYwODI3OTU4XX0=
 -->
