@@ -59,7 +59,8 @@ awk '{print >> $3"_chromo_maize.txt}' joined_maize.txt
 ```
 sort by position
 ```
-sort -k3,3n 1_chromo
+sort -k3,3n 1_chromo_maize.txt > 1_chromo_increasing_maize.txt
+sort -k3,3n -r 1_chromo_maize.txt > 1_chromo_decreasing_maize.txt
 ```
 add header
 * make chromosome_header.txt
@@ -67,10 +68,10 @@ add header
 
 ## Data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNTIzNjg0MywxMjIxNzU5NzU4LDE0OD
-EyNjkxNzYsLTEyMjk4NjQwODgsLTE3OTc2NDMxNzMsLTg4MjUy
-NDkwNCwtMTgyMTA2NzgyNyw4NTA1MDY5NzUsLTMwODUzMDI2MC
-wxMTQzNjYyNTYxLC0xOTU4NjAyMzcwLDE2MjYxNjA0MSwtNzYw
-ODI3OTU4LDMyMDQ5NTM3Miw2NjM1NzI5MjIsLTE3Mjc5NzI5MT
-QsNjEyMjcwNSw5MjY2NDM2NDNdfQ==
+eyJoaXN0b3J5IjpbLTY2MjU2NDY0LDEyMjE3NTk3NTgsMTQ4MT
+I2OTE3NiwtMTIyOTg2NDA4OCwtMTc5NzY0MzE3MywtODgyNTI0
+OTA0LC0xODIxMDY3ODI3LDg1MDUwNjk3NSwtMzA4NTMwMjYwLD
+ExNDM2NjI1NjEsLTE5NTg2MDIzNzAsMTYyNjE2MDQxLC03NjA4
+Mjc5NTgsMzIwNDk1MzcyLDY2MzU3MjkyMiwtMTcyNzk3MjkxNC
+w2MTIyNzA1LDkyNjY0MzY0M119
 -->
