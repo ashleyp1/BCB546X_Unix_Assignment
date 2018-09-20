@@ -61,15 +61,16 @@ add header
 ```
 head -1 snp_position.txt > snp_header.txt
 head -1 trans_maize_geno.txt > trans_maize_header.txt
-join -1 1 -2 1
+join -1 1 -2 1 -t $'\t' --header snp_header.txt trans_maize_header.txt > joined_maize_header.txt
+
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyMDQzNDczMyw3NzMzMDAzNTIsLTIwOD
-Q2NDk4ODgsLTkxMDEzNDAwMSwtMTkyNjU0MzY4NiwtMTk0NTY0
-MDQ5NywxMzQ3NjMyODkyLDEwMjM2MjQ1MDksLTY2MjU2NDY0LD
-EyMjE3NTk3NTgsMTQ4MTI2OTE3NiwtMTIyOTg2NDA4OCwtMTc5
-NzY0MzE3MywtODgyNTI0OTA0LC0xODIxMDY3ODI3LDg1MDUwNj
-k3NSwtMzA4NTMwMjYwLDExNDM2NjI1NjEsLTE5NTg2MDIzNzAs
-MTYyNjE2MDQxXX0=
+eyJoaXN0b3J5IjpbLTgyMTAzODA5LDc3MzMwMDM1MiwtMjA4ND
+Y0OTg4OCwtOTEwMTM0MDAxLC0xOTI2NTQzNjg2LC0xOTQ1NjQw
+NDk3LDEzNDc2MzI4OTIsMTAyMzYyNDUwOSwtNjYyNTY0NjQsMT
+IyMTc1OTc1OCwxNDgxMjY5MTc2LC0xMjI5ODY0MDg4LC0xNzk3
+NjQzMTczLC04ODI1MjQ5MDQsLTE4MjEwNjc4MjcsODUwNTA2OT
+c1LC0zMDg1MzAyNjAsMTE0MzY2MjU2MSwtMTk1ODYwMjM3MCwx
+NjI2MTYwNDFdfQ==
 -->
