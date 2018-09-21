@@ -7,12 +7,13 @@ du -h snp_position.txt
 84K snp_position.txt
 
 du -h fang_et_al_genotypes.txt
-11
+11M fang_et_al_genotypes.txt
 ```
 * Word count gives files sizes and some general numbers
 ```
 wc snp_position.txt
  984 13198 82763 snp_position.txt
+ 
 wc fang_et_al_genotypes.txt
  2783 2744038 11051939 fang_et_al_genotypes.txt
 ```
@@ -20,6 +21,7 @@ wc fang_et_al_genotypes.txt
 ```
 awk -F "\t" '{print NF; exit}' snp_position.txt
 15
+
 awk -F "\t" '{print NF; exit}' fang_et_al_genotypes.txt
 986
 ```
@@ -110,7 +112,7 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1MDkxNzM2NiwxNDUxMjAwOTU3LC01Mj
+eyJoaXN0b3J5IjpbMTEyNzk0OTMwOCwxNDUxMjAwOTU3LC01Mj
 E1MzI2NDksODc5MTA0OTQsMTMxMzE3NTI1MSwxNzEzOTU0NzQ0
 LC0xNTc5Nzk2NDY2LDIyNzU0MzQxOCwtMTIwMjk0NDcxOCwtMT
 kwNjU5MDg3NiwtMTA0MzU5ODYzNiwtNTI2MjI2MTYwLDY0NTk3
