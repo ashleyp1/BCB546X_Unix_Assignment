@@ -21,7 +21,7 @@ head -1 fang_et_al_genotypes.txt > header.txt
 cat header.txt >> proper_maize_genotype.txt
 cat maize_genotypes.txt >> proper_maize_genotype.txt
 ```
-* Transpose, again do it for both maize and teosinte
+* Transpose
 ```
  awk -f transpose.awk proper_maize_genotypes.txt > trans_maize_geno.txt
 ```
@@ -32,11 +32,11 @@ cut -f 1,3,4 snp_position.txt > trimmed_snp_position.txt
 head -1 trimmed_snp_position.txt > snp_header.txt
 ```
 
-* Sort `trimmed_snp_positions.txt`, `trans_teosinte_geno.txt`, and `trans_maize_geno.txt`. Save as sorted versions.
+* Sort `trimmed_snp_positions.txt` and `trans_maize_geno.txt`. Save as sorted versions.
 ```
 sort -k1,1 file.txt > sorted_file.txt
 ```
-* Join files. Join based on the first column of each file, with the resulting file delimited by tabs. Repeat with teosinte files.
+* Join files. Join based on the first column of each file, with the resulting file delimited by tabs.
 ```
 join -1 1 -2 1 -t $'\t' sorted_trimmed_snp.txt sorted_trans_maize.txt > joined_maize.txt
 ```
@@ -64,7 +64,7 @@ sort -k3,3 -n -r 1_chromo_maize.txt > 1_chromo_decre_maize.txt
 sed -i 's/?/-/g' 1_chromo_decre_maize.txt
 ```
 
-* add header, do for every final file
+* Add header, do for every final file
 ```
 head -1 snp_position.txt > snp_header.txt
 head -1 trans_maize_geno.txt > trans_maize_header.txt
@@ -74,7 +74,7 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1MTg1NDIzOCwxNzEzOTU0NzQ0LC0xNT
+eyJoaXN0b3J5IjpbMTMxMzE3NTI1MSwxNzEzOTU0NzQ0LC0xNT
 c5Nzk2NDY2LDIyNzU0MzQxOCwtMTIwMjk0NDcxOCwtMTkwNjU5
 MDg3NiwtMTA0MzU5ODYzNiwtNTI2MjI2MTYwLDY0NTk3OTMwMS
 wtMTczOTA5NDQ5Nyw1NTg1NjA5NDMsMTA3NzcyODk0OCwxMDIx
