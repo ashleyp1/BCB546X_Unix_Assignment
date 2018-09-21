@@ -63,7 +63,7 @@ head -1 fang_et_al_genotypes.txt > header.txt
 cat header.txt >> proper_maize_genotype.txt
 cat maize_genotypes.txt >> proper_maize_genotype.txt
 ```
-* Transpose (both m
+* Transpose (repeat for teosinte)
 ```
  awk -f transpose.awk proper_maize_genotypes.txt > trans_maize_geno.txt
 ```
@@ -74,7 +74,7 @@ cut -f 1,3,4 snp_position.txt > trimmed_snp_position.txt
 head -1 trimmed_snp_position.txt > snp_header.txt
 ```
 
-* Sort `trimmed_snp_positions.txt` and `trans_maize_geno.txt`. Save as sorted versions.
+* Sort `trimmed_snp_positions.txt` and `trans_maize_geno.txt`, `trans_teosinte_geno.txt`. Save as sorted versions.
 ```
 sort -k1,1 file.txt > sorted_file.txt
 ```
@@ -116,7 +116,7 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDExNjk3MzIsMTEyNzk0OTMwOCwxND
+eyJoaXN0b3J5IjpbLTExMTU1MzEzOTQsMTEyNzk0OTMwOCwxND
 UxMjAwOTU3LC01MjE1MzI2NDksODc5MTA0OTQsMTMxMzE3NTI1
 MSwxNzEzOTU0NzQ0LC0xNTc5Nzk2NDY2LDIyNzU0MzQxOCwtMT
 IwMjk0NDcxOCwtMTkwNjU5MDg3NiwtMTA0MzU5ODYzNiwtNTI2
