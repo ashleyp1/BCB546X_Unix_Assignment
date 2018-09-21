@@ -57,7 +57,7 @@ vi teosinte_search.txt
 #Write and save ZMPBA, ZMPIL, ZMPJA
 grep -f teosinte_search.txt fang_et_al_genotypes.txt >> teosinte_genotypes.txt
 ```
-* Add the header back, required for sorting later on. 
+* Add the header back, required for sorting later on
 ```
 head -1 fang_et_al_genotypes.txt > header.txt
 cat header.txt >> proper_maize_genotype.txt
@@ -71,7 +71,7 @@ cat teosinte_genotypes.txt >> proper_teosinte_genotype.txt
  awk -f transpose.awk proper_maize_genotypes.txt > trans_maize_geno.txt
 ```
 
-* Trim snp data
+* Trim snp data and save header for later
 ```
 cut -f 1,3,4 snp_position.txt > trimmed_snp_position.txt
 head -1 trimmed_snp_position.txt > snp_header.txt
@@ -119,11 +119,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIyMzA5MjEzLDExMjc5NDkzMDgsMTQ1MT
-IwMDk1NywtNTIxNTMyNjQ5LDg3OTEwNDk0LDEzMTMxNzUyNTEs
-MTcxMzk1NDc0NCwtMTU3OTc5NjQ2NiwyMjc1NDM0MTgsLTEyMD
-I5NDQ3MTgsLTE5MDY1OTA4NzYsLTEwNDM1OTg2MzYsLTUyNjIy
-NjE2MCw2NDU5NzkzMDEsLTE3MzkwOTQ0OTcsNTU4NTYwOTQzLD
-EwNzc3Mjg5NDgsMTAyMTYzMTI0NCwxMDIwODk1NzQzLC04Nzky
-MTE1MDddfQ==
+eyJoaXN0b3J5IjpbLTIwNTQ4ODE5MDksMTEyNzk0OTMwOCwxND
+UxMjAwOTU3LC01MjE1MzI2NDksODc5MTA0OTQsMTMxMzE3NTI1
+MSwxNzEzOTU0NzQ0LC0xNTc5Nzk2NDY2LDIyNzU0MzQxOCwtMT
+IwMjk0NDcxOCwtMTkwNjU5MDg3NiwtMTA0MzU5ODYzNiwtNTI2
+MjI2MTYwLDY0NTk3OTMwMSwtMTczOTA5NDQ5Nyw1NTg1NjA5ND
+MsMTA3NzcyODk0OCwxMDIxNjMxMjQ0LDEwMjA4OTU3NDMsLTg3
+OTIxMTUwN119
 -->
