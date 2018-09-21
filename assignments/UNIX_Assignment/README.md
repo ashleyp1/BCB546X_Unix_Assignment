@@ -28,7 +28,7 @@ cat maize_genotypes.txt >> proper_genotype.txt
 
 * trim snp data
 ```
-cut -f 1,3,4 snp_position.txt >> trimmed_snp_position.txt
+cut -f 1,3,4 snp_position.txt > trimmed_snp_position.txt
 head -1 trimmed_snp_position.txt > snp_header.txt
 ```
 
@@ -42,8 +42,8 @@ join -1 1 -2 1 -t $'\t' sorted_trimmed_snp.txt sorted_trans_maize.txt > joined_m
 ```
 * make a file with all unknown and multiple position snps removed
 ```
-awk '$3!/unknown/' joined_maize.txt > trimmed_uknown_maize.tzt
-awk '$3!/unknown/' trimmed_unknown_maize.txt > trimmed_maize.txt
+awk '$3!/unknown/' joined_maize.txt > trimmed_uknown_maize.txt
+awk '$3!/multiple/' trimmed_unknown_maize.txt > trimmed_maize.txt
 ```
 * Make files of all with unknown position and all multiple position snps.
 ```
@@ -75,11 +75,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNjIyNjE2MCw2NDU5NzkzMDEsLTE3Mz
-kwOTQ0OTcsNTU4NTYwOTQzLDEwNzc3Mjg5NDgsMTAyMTYzMTI0
-NCwxMDIwODk1NzQzLC04NzkyMTE1MDcsMTU2NzEyMDQyLDE4ND
-cyODc5NDksLTY4ODY0MjAyOSw3NzMzMDAzNTIsLTIwODQ2NDk4
-ODgsLTkxMDEzNDAwMSwtMTkyNjU0MzY4NiwtMTk0NTY0MDQ5Ny
-wxMzQ3NjMyODkyLDEwMjM2MjQ1MDksLTY2MjU2NDY0LDEyMjE3
-NTk3NThdfQ==
+eyJoaXN0b3J5IjpbLTE5MDY1OTA4NzYsLTEwNDM1OTg2MzYsLT
+UyNjIyNjE2MCw2NDU5NzkzMDEsLTE3MzkwOTQ0OTcsNTU4NTYw
+OTQzLDEwNzc3Mjg5NDgsMTAyMTYzMTI0NCwxMDIwODk1NzQzLC
+04NzkyMTE1MDcsMTU2NzEyMDQyLDE4NDcyODc5NDksLTY4ODY0
+MjAyOSw3NzMzMDAzNTIsLTIwODQ2NDk4ODgsLTkxMDEzNDAwMS
+wtMTkyNjU0MzY4NiwtMTk0NTY0MDQ5NywxMzQ3NjMyODkyLDEw
+MjM2MjQ1MDldfQ==
 -->
