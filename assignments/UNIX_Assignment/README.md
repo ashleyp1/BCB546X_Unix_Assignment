@@ -6,11 +6,14 @@
 wc snp_position.txt
  984 13198 82763 snp_position.txt
 wc fang_et_al_genotypes.txt
- 2783 2744038 11051939 fang_et_al
+ 2783 2744038 11051939 fang_et_al_genotypes.txt
 ```
 * Inspect the number of columns in files (useful for checking your work as you go)
 ```
-awk -F "\t" '{print NF; exit}' file.txt
+awk -F "\t" '{print NF; exit}' snp_position.txt
+15
+awk -F "\t" '{print NF; exit}' fang_et_al_genotypes.txt
+
 ```
 * Inspect the top of the files `fang_et_al_genotypes.txt` and `snp_position.txt`
 ```
@@ -85,7 +88,7 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5Nzg1MzgwNSwxNDUxMjAwOTU3LC01Mj
+eyJoaXN0b3J5IjpbMTk4MjM5NTg3OCwxNDUxMjAwOTU3LC01Mj
 E1MzI2NDksODc5MTA0OTQsMTMxMzE3NTI1MSwxNzEzOTU0NzQ0
 LC0xNTc5Nzk2NDY2LDIyNzU0MzQxOCwtMTIwMjk0NDcxOCwtMT
 kwNjU5MDg3NiwtMTA0MzU5ODYzNiwtNTI2MjI2MTYwLDY0NTk3
