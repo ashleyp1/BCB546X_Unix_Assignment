@@ -8,7 +8,7 @@ cut -f 1-6 file.txt | column -t | (head -n 5; tail -n 5)
 ```
 * Word count gives files sizes and some general numbers
 ```
-
+wc snp_position.txt
 ```
 
 ## Processing the Data
@@ -79,11 +79,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMTUzMjY0OSw4NzkxMDQ5NCwxMzEzMT
-c1MjUxLDE3MTM5NTQ3NDQsLTE1Nzk3OTY0NjYsMjI3NTQzNDE4
-LC0xMjAyOTQ0NzE4LC0xOTA2NTkwODc2LC0xMDQzNTk4NjM2LC
-01MjYyMjYxNjAsNjQ1OTc5MzAxLC0xNzM5MDk0NDk3LDU1ODU2
-MDk0MywxMDc3NzI4OTQ4LDEwMjE2MzEyNDQsMTAyMDg5NTc0My
-wtODc5MjExNTA3LDE1NjcxMjA0MiwxODQ3Mjg3OTQ5LC02ODg2
-NDIwMjldfQ==
+eyJoaXN0b3J5IjpbLTE2NTQ0MDU1MTgsLTUyMTUzMjY0OSw4Nz
+kxMDQ5NCwxMzEzMTc1MjUxLDE3MTM5NTQ3NDQsLTE1Nzk3OTY0
+NjYsMjI3NTQzNDE4LC0xMjAyOTQ0NzE4LC0xOTA2NTkwODc2LC
+0xMDQzNTk4NjM2LC01MjYyMjYxNjAsNjQ1OTc5MzAxLC0xNzM5
+MDk0NDk3LDU1ODU2MDk0MywxMDc3NzI4OTQ4LDEwMjE2MzEyND
+QsMTAyMDg5NTc0MywtODc5MjExNTA3LDE1NjcxMjA0MiwxODQ3
+Mjg3OTQ5XX0=
 -->
