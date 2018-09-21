@@ -43,12 +43,12 @@ join -1 1 -2 1 -t $'\t' sorted_trimmed_snp.txt sorted_trans_maize.txt > joined_m
 * make a file with all unknown and multiple position snps removed
 ```
 awk '$3!/unknown/' joined_maize.txt > trimmed_uknown_maize.tzt
-awk '$3!/unknown/' 
+awk '$3!/unknown/' trimmed_unknown_maize.txt > trimmed_maize.txt
 ```
 
 * Sort by chromosome
 ```
-awk '{print >> $2"_chromo_maize.txt"}' joined_maize.txt
+awk '{print >> $2"_chromo_maize.txt"}' trimmed_maize.txt
 ```
 * Sort by position
 ```
@@ -72,7 +72,7 @@ cut -f 1,3-1588 joined_maize_header.txt >> trimmed_maize_header.txt
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTM2NTk2MiwxMDIxNjMxMjQ0LDEwMj
+eyJoaXN0b3J5IjpbMTA3NzcyODk0OCwxMDIxNjMxMjQ0LDEwMj
 A4OTU3NDMsLTg3OTIxMTUwNywxNTY3MTIwNDIsMTg0NzI4Nzk0
 OSwtNjg4NjQyMDI5LDc3MzMwMDM1MiwtMjA4NDY0OTg4OCwtOT
 EwMTM0MDAxLC0xOTI2NTQzNjg2LC0xOTQ1NjQwNDk3LDEzNDc2
