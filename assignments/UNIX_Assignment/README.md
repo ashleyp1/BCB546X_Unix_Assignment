@@ -45,9 +45,7 @@ CU0202       Zmm-IL-Yu796_NS_f         ZMMIL  C/C       A/A
 ```
 
 ## Processing the Data
-#### Re
-* Move maize data to one folder ( repeat with teosinte replacing maize terms)
-
+* Move maize data to one folder
 ```
 touch maize_search.txt 
 vi maize_search.txt
@@ -59,13 +57,13 @@ vi teosinte_search.txt
 #Write and save ZMPBA, ZMPIL, ZMPJA
 grep -f teosinte_search.txt fang_et_al_genotypes.txt >> teosinte_genotypes.txt
 ```
-* Add the header back, required for sorting later on.
+* Add the header back, required for sorting later on. Do for both maize and teosinte
 ```
 head -1 fang_et_al_genotypes.txt > header.txt
 cat header.txt >> proper_maize_genotype.txt
 cat maize_genotypes.txt >> proper_maize_genotype.txt
 ```
-* Transpose
+* Transpose (both m
 ```
  awk -f transpose.awk proper_maize_genotypes.txt > trans_maize_geno.txt
 ```
@@ -118,7 +116,7 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzcwMjU0MzUsMTEyNzk0OTMwOCwxND
+eyJoaXN0b3J5IjpbLTEyMDExNjk3MzIsMTEyNzk0OTMwOCwxND
 UxMjAwOTU3LC01MjE1MzI2NDksODc5MTA0OTQsMTMxMzE3NTI1
 MSwxNzEzOTU0NzQ0LC0xNTc5Nzk2NDY2LDIyNzU0MzQxOCwtMT
 IwMjk0NDcxOCwtMTkwNjU5MDg3NiwtMTA0MzU5ODYzNiwtNTI2
