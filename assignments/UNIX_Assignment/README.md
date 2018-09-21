@@ -1,6 +1,6 @@
 # BCB546X_Unix_Assignment
 ## Inspecting the Data
-* Inspect the files `fang_et_al_genotypes.txt` and `snp_position.txt`
+* Inspect the top of the files `fang_et_al_genotypes.txt` and `snp_position.txt`
 
 ```
 cut -f 1-6 file.txt | column -t | (head -n 5; tail -n 5)
@@ -74,11 +74,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMzE3NTI1MSwxNzEzOTU0NzQ0LC0xNT
-c5Nzk2NDY2LDIyNzU0MzQxOCwtMTIwMjk0NDcxOCwtMTkwNjU5
-MDg3NiwtMTA0MzU5ODYzNiwtNTI2MjI2MTYwLDY0NTk3OTMwMS
-wtMTczOTA5NDQ5Nyw1NTg1NjA5NDMsMTA3NzcyODk0OCwxMDIx
-NjMxMjQ0LDEwMjA4OTU3NDMsLTg3OTIxMTUwNywxNTY3MTIwND
-IsMTg0NzI4Nzk0OSwtNjg4NjQyMDI5LDc3MzMwMDM1MiwtMjA4
-NDY0OTg4OF19
+eyJoaXN0b3J5IjpbODc5MTA0OTQsMTMxMzE3NTI1MSwxNzEzOT
+U0NzQ0LC0xNTc5Nzk2NDY2LDIyNzU0MzQxOCwtMTIwMjk0NDcx
+OCwtMTkwNjU5MDg3NiwtMTA0MzU5ODYzNiwtNTI2MjI2MTYwLD
+Y0NTk3OTMwMSwtMTczOTA5NDQ5Nyw1NTg1NjA5NDMsMTA3Nzcy
+ODk0OCwxMDIxNjMxMjQ0LDEwMjA4OTU3NDMsLTg3OTIxMTUwNy
+wxNTY3MTIwNDIsMTg0NzI4Nzk0OSwtNjg4NjQyMDI5LDc3MzMw
+MDM1Ml19
 -->
