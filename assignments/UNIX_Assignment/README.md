@@ -10,9 +10,9 @@ cut -f 1-6 file.txt | column -t | (head -n 5; tail -n 5)
 ```
 wc snp_position.txt
 ```
-* Inspect the number of columns using
+* Inspect the number of columns in files (useful for checking your work as you go)
 ```
-awk -F "\t" '{print NF; exit}' snp_position.
+awk -F "\t" '{print NF; exit}' file.txt
 ```
 
 ## Processing the Data
@@ -83,11 +83,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjIwNjE5NDcsLTUyMTUzMjY0OSw4Nz
-kxMDQ5NCwxMzEzMTc1MjUxLDE3MTM5NTQ3NDQsLTE1Nzk3OTY0
-NjYsMjI3NTQzNDE4LC0xMjAyOTQ0NzE4LC0xOTA2NTkwODc2LC
-0xMDQzNTk4NjM2LC01MjYyMjYxNjAsNjQ1OTc5MzAxLC0xNzM5
-MDk0NDk3LDU1ODU2MDk0MywxMDc3NzI4OTQ4LDEwMjE2MzEyND
-QsMTAyMDg5NTc0MywtODc5MjExNTA3LDE1NjcxMjA0MiwxODQ3
-Mjg3OTQ5XX0=
+eyJoaXN0b3J5IjpbMTA1NzExMDM3OSwtNTIxNTMyNjQ5LDg3OT
+EwNDk0LDEzMTMxNzUyNTEsMTcxMzk1NDc0NCwtMTU3OTc5NjQ2
+NiwyMjc1NDM0MTgsLTEyMDI5NDQ3MTgsLTE5MDY1OTA4NzYsLT
+EwNDM1OTg2MzYsLTUyNjIyNjE2MCw2NDU5NzkzMDEsLTE3Mzkw
+OTQ0OTcsNTU4NTYwOTQzLDEwNzc3Mjg5NDgsMTAyMTYzMTI0NC
+wxMDIwODk1NzQzLC04NzkyMTE1MDcsMTU2NzEyMDQyLDE4NDcy
+ODc5NDldfQ==
 -->
