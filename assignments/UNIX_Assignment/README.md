@@ -12,9 +12,7 @@ wc snp_position.txt
 ```
 * Inspect the number of columns using
 ```
-```
-awk -F "\t" '{print NF; exit}
-```
+awk -F "\t" '{print NF; exit}' snp_position.
 ```
 
 ## Processing the Data
@@ -85,11 +83,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU1NDc2Nzg5LC01MjE1MzI2NDksODc5MT
-A0OTQsMTMxMzE3NTI1MSwxNzEzOTU0NzQ0LC0xNTc5Nzk2NDY2
-LDIyNzU0MzQxOCwtMTIwMjk0NDcxOCwtMTkwNjU5MDg3NiwtMT
-A0MzU5ODYzNiwtNTI2MjI2MTYwLDY0NTk3OTMwMSwtMTczOTA5
-NDQ5Nyw1NTg1NjA5NDMsMTA3NzcyODk0OCwxMDIxNjMxMjQ0LD
-EwMjA4OTU3NDMsLTg3OTIxMTUwNywxNTY3MTIwNDIsMTg0NzI4
-Nzk0OV19
+eyJoaXN0b3J5IjpbLTEzMjIwNjE5NDcsLTUyMTUzMjY0OSw4Nz
+kxMDQ5NCwxMzEzMTc1MjUxLDE3MTM5NTQ3NDQsLTE1Nzk3OTY0
+NjYsMjI3NTQzNDE4LC0xMjAyOTQ0NzE4LC0xOTA2NTkwODc2LC
+0xMDQzNTk4NjM2LC01MjYyMjYxNjAsNjQ1OTc5MzAxLC0xNzM5
+MDk0NDk3LDU1ODU2MDk0MywxMDc3NzI4OTQ4LDEwMjE2MzEyND
+QsMTAyMDg5NTc0MywtODc5MjExNTA3LDE1NjcxMjA0MiwxODQ3
+Mjg3OTQ5XX0=
 -->
