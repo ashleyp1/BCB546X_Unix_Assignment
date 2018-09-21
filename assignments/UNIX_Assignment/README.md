@@ -69,19 +69,16 @@ add header
 ```
 head -1 snp_position.txt > snp_header.txt
 head -1 trans_maize_geno.txt > trans_maize_header.txt
-join -1 1 -2 1 -t $'\t' --header snp_header.txt trans_maize_header.txt > joined_maize_header.txt\
-awk -F "\t" '{print NF; exit}' joined_maize_header.txt
-	output shows 1588
-cut -f 1,3-1588 joined_maize_header.txt >> trimmed_maize_header.txt
-
+join -1 1 -2 1 -t $'\t' --header snp_header.txt trans_maize_header.txt > joined_maize_header.txt
+cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1_chromo_incre_maize.txt
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzkwOTQ0OTcsNTU4NTYwOTQzLDEwNz
-c3Mjg5NDgsMTAyMTYzMTI0NCwxMDIwODk1NzQzLC04NzkyMTE1
-MDcsMTU2NzEyMDQyLDE4NDcyODc5NDksLTY4ODY0MjAyOSw3Nz
-MzMDAzNTIsLTIwODQ2NDk4ODgsLTkxMDEzNDAwMSwtMTkyNjU0
-MzY4NiwtMTk0NTY0MDQ5NywxMzQ3NjMyODkyLDEwMjM2MjQ1MD
-ksLTY2MjU2NDY0LDEyMjE3NTk3NTgsMTQ4MTI2OTE3NiwtMTIy
-OTg2NDA4OF19
+eyJoaXN0b3J5IjpbNjQ1OTc5MzAxLC0xNzM5MDk0NDk3LDU1OD
+U2MDk0MywxMDc3NzI4OTQ4LDEwMjE2MzEyNDQsMTAyMDg5NTc0
+MywtODc5MjExNTA3LDE1NjcxMjA0MiwxODQ3Mjg3OTQ5LC02OD
+g2NDIwMjksNzczMzAwMzUyLC0yMDg0NjQ5ODg4LC05MTAxMzQw
+MDEsLTE5MjY1NDM2ODYsLTE5NDU2NDA0OTcsMTM0NzYzMjg5Mi
+wxMDIzNjI0NTA5LC02NjI1NjQ2NCwxMjIxNzU5NzU4LDE0ODEy
+NjkxNzZdfQ==
 -->
