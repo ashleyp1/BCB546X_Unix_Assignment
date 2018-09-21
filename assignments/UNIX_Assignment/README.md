@@ -6,7 +6,10 @@
 cut -f 1-6 file.txt | column -t | (head -n 5; tail -n 5)
 
 ```
-*
+* Word count gives files sizes and some general numbers
+```
+
+```
 
 ## Processing the Data
 * Move maize data to one folder ( repeat with teosinte replacing maize terms)
@@ -76,7 +79,7 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwODg1MjEzMCw4NzkxMDQ5NCwxMzEzMT
+eyJoaXN0b3J5IjpbLTUyMTUzMjY0OSw4NzkxMDQ5NCwxMzEzMT
 c1MjUxLDE3MTM5NTQ3NDQsLTE1Nzk3OTY0NjYsMjI3NTQzNDE4
 LC0xMjAyOTQ0NzE4LC0xOTA2NTkwODc2LC0xMDQzNTk4NjM2LC
 01MjYyMjYxNjAsNjQ1OTc5MzAxLC0xNzM5MDk0NDk3LDU1ODU2
