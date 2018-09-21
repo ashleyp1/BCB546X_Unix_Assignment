@@ -28,7 +28,7 @@ cat maize_genotypes.txt >> proper_genotype.txt
 
 * trim snp data
 ```
-cut -f 1,3,4 snp_position.txt >> trimmed_snp_position.txt
+cut -f 1,3,4 snp_position.txt > trimmed_snp_position.txt
 head -1 trimmed_snp_position.txt > snp_header.txt
 ```
 
@@ -75,11 +75,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNjIyNjE2MCw2NDU5NzkzMDEsLTE3Mz
-kwOTQ0OTcsNTU4NTYwOTQzLDEwNzc3Mjg5NDgsMTAyMTYzMTI0
-NCwxMDIwODk1NzQzLC04NzkyMTE1MDcsMTU2NzEyMDQyLDE4ND
-cyODc5NDksLTY4ODY0MjAyOSw3NzMzMDAzNTIsLTIwODQ2NDk4
-ODgsLTkxMDEzNDAwMSwtMTkyNjU0MzY4NiwtMTk0NTY0MDQ5Ny
-wxMzQ3NjMyODkyLDEwMjM2MjQ1MDksLTY2MjU2NDY0LDEyMjE3
-NTk3NThdfQ==
+eyJoaXN0b3J5IjpbLTEwNDM1OTg2MzYsLTUyNjIyNjE2MCw2ND
+U5NzkzMDEsLTE3MzkwOTQ0OTcsNTU4NTYwOTQzLDEwNzc3Mjg5
+NDgsMTAyMTYzMTI0NCwxMDIwODk1NzQzLC04NzkyMTE1MDcsMT
+U2NzEyMDQyLDE4NDcyODc5NDksLTY4ODY0MjAyOSw3NzMzMDAz
+NTIsLTIwODQ2NDk4ODgsLTkxMDEzNDAwMSwtMTkyNjU0MzY4Ni
+wtMTk0NTY0MDQ5NywxMzQ3NjMyODkyLDEwMjM2MjQ1MDksLTY2
+MjU2NDY0XX0=
 -->
