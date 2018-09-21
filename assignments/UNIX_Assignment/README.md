@@ -43,7 +43,7 @@ join -1 1 -2 1 -t $'\t' sorted_trimmed_snp.txt sorted_trans_maize.txt > joined_m
 * make a file with all unknown and multiple position snps removed
 ```
 awk '$3!~/unknown/' joined_maize.txt > trimmed_uknown_maize.txt
-awk '$3!/multiple/' trimmed_unknown_maize.txt > trimmed_maize.txt
+awk '$3!~/multiple/' trimmed_unknown_maize.txt > trimmed_maize.txt
 ```
 * Make files of all with unknown position and all multiple position snps.
 ```
@@ -75,11 +75,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2Mzk3NzcxNCwtMTkwNjU5MDg3NiwtMT
-A0MzU5ODYzNiwtNTI2MjI2MTYwLDY0NTk3OTMwMSwtMTczOTA5
-NDQ5Nyw1NTg1NjA5NDMsMTA3NzcyODk0OCwxMDIxNjMxMjQ0LD
-EwMjA4OTU3NDMsLTg3OTIxMTUwNywxNTY3MTIwNDIsMTg0NzI4
-Nzk0OSwtNjg4NjQyMDI5LDc3MzMwMDM1MiwtMjA4NDY0OTg4OC
-wtOTEwMTM0MDAxLC0xOTI2NTQzNjg2LC0xOTQ1NjQwNDk3LDEz
-NDc2MzI4OTJdfQ==
+eyJoaXN0b3J5IjpbLTEyMDI5NDQ3MTgsLTE5MDY1OTA4NzYsLT
+EwNDM1OTg2MzYsLTUyNjIyNjE2MCw2NDU5NzkzMDEsLTE3Mzkw
+OTQ0OTcsNTU4NTYwOTQzLDEwNzc3Mjg5NDgsMTAyMTYzMTI0NC
+wxMDIwODk1NzQzLC04NzkyMTE1MDcsMTU2NzEyMDQyLDE4NDcy
+ODc5NDksLTY4ODY0MjAyOSw3NzMzMDAzNTIsLTIwODQ2NDk4OD
+gsLTkxMDEzNDAwMSwtMTkyNjU0MzY4NiwtMTk0NTY0MDQ5Nywx
+MzQ3NjMyODkyXX0=
 -->
