@@ -13,11 +13,12 @@ wc fang_et_al_genotypes.txt
 awk -F "\t" '{print NF; exit}' snp_position.txt
 15
 awk -F "\t" '{print NF; exit}' fang_et_al_genotypes.txt
+986
+```
+* Inspect the top and bottom of the files `fang_et_al_genotypes.txt` and `snp_position.txt`
+```
+cut -f 1-5 file.txt | column -t | (head -n 3; tail -n 3)
 
-```
-* Inspect the top of the files `fang_et_al_genotypes.txt` and `snp_position.txt`
-```
-cut -f 1-6 file.txt | column -t | (head -n 5; tail -n 5)
 ```
 
 ## Processing the Data
@@ -88,11 +89,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4MjM5NTg3OCwxNDUxMjAwOTU3LC01Mj
-E1MzI2NDksODc5MTA0OTQsMTMxMzE3NTI1MSwxNzEzOTU0NzQ0
-LC0xNTc5Nzk2NDY2LDIyNzU0MzQxOCwtMTIwMjk0NDcxOCwtMT
-kwNjU5MDg3NiwtMTA0MzU5ODYzNiwtNTI2MjI2MTYwLDY0NTk3
-OTMwMSwtMTczOTA5NDQ5Nyw1NTg1NjA5NDMsMTA3NzcyODk0OC
-wxMDIxNjMxMjQ0LDEwMjA4OTU3NDMsLTg3OTIxMTUwNywxNTY3
-MTIwNDJdfQ==
+eyJoaXN0b3J5IjpbLTEzMTQzNTg4NDgsMTQ1MTIwMDk1NywtNT
+IxNTMyNjQ5LDg3OTEwNDk0LDEzMTMxNzUyNTEsMTcxMzk1NDc0
+NCwtMTU3OTc5NjQ2NiwyMjc1NDM0MTgsLTEyMDI5NDQ3MTgsLT
+E5MDY1OTA4NzYsLTEwNDM1OTg2MzYsLTUyNjIyNjE2MCw2NDU5
+NzkzMDEsLTE3MzkwOTQ0OTcsNTU4NTYwOTQzLDEwNzc3Mjg5ND
+gsMTAyMTYzMTI0NCwxMDIwODk1NzQzLC04NzkyMTE1MDcsMTU2
+NzEyMDQyXX0=
 -->
