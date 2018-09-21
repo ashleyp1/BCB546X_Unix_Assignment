@@ -6,6 +6,8 @@
 cut -f 1-6 file.txt | column -t | (head -n 5; tail -n 5)
 
 ```
+*
+
 ## Processing the Data
 * Move maize data to one folder ( repeat with teosinte replacing maize terms)
 
@@ -74,11 +76,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc5MTA0OTQsMTMxMzE3NTI1MSwxNzEzOT
-U0NzQ0LC0xNTc5Nzk2NDY2LDIyNzU0MzQxOCwtMTIwMjk0NDcx
-OCwtMTkwNjU5MDg3NiwtMTA0MzU5ODYzNiwtNTI2MjI2MTYwLD
-Y0NTk3OTMwMSwtMTczOTA5NDQ5Nyw1NTg1NjA5NDMsMTA3Nzcy
-ODk0OCwxMDIxNjMxMjQ0LDEwMjA4OTU3NDMsLTg3OTIxMTUwNy
-wxNTY3MTIwNDIsMTg0NzI4Nzk0OSwtNjg4NjQyMDI5LDc3MzMw
-MDM1Ml19
+eyJoaXN0b3J5IjpbLTcwODg1MjEzMCw4NzkxMDQ5NCwxMzEzMT
+c1MjUxLDE3MTM5NTQ3NDQsLTE1Nzk3OTY0NjYsMjI3NTQzNDE4
+LC0xMjAyOTQ0NzE4LC0xOTA2NTkwODc2LC0xMDQzNTk4NjM2LC
+01MjYyMjYxNjAsNjQ1OTc5MzAxLC0xNzM5MDk0NDk3LDU1ODU2
+MDk0MywxMDc3NzI4OTQ4LDEwMjE2MzEyNDQsMTAyMDg5NTc0My
+wtODc5MjExNTA3LDE1NjcxMjA0MiwxODQ3Mjg3OTQ5LC02ODg2
+NDIwMjldfQ==
 -->
