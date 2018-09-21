@@ -40,7 +40,11 @@ sort -k1,1 file.txt > sorted_file.txt
 ```
 join -1 1 -2 1 -t $'\t' sorted_trimmed_snp.txt sorted_trans_maize.txt > joined_maize.txt
 ```
-*
+* make a file with all unknown and multiple position snps removed
+```
+awk '$3!/unknown/' joined_maize.txt > trimmed_uknown_maize.tzt
+awk '$3!/unknown/' 
+```
 
 * Sort by chromosome
 ```
@@ -68,11 +72,11 @@ cut -f 1,3-1588 joined_maize_header.txt >> trimmed_maize_header.txt
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTcxODMwNjAsMTAyMTYzMTI0NCwxMD
-IwODk1NzQzLC04NzkyMTE1MDcsMTU2NzEyMDQyLDE4NDcyODc5
-NDksLTY4ODY0MjAyOSw3NzMzMDAzNTIsLTIwODQ2NDk4ODgsLT
-kxMDEzNDAwMSwtMTkyNjU0MzY4NiwtMTk0NTY0MDQ5NywxMzQ3
-NjMyODkyLDEwMjM2MjQ1MDksLTY2MjU2NDY0LDEyMjE3NTk3NT
-gsMTQ4MTI2OTE3NiwtMTIyOTg2NDA4OCwtMTc5NzY0MzE3Mywt
-ODgyNTI0OTA0XX0=
+eyJoaXN0b3J5IjpbLTE3NTM2NTk2MiwxMDIxNjMxMjQ0LDEwMj
+A4OTU3NDMsLTg3OTIxMTUwNywxNTY3MTIwNDIsMTg0NzI4Nzk0
+OSwtNjg4NjQyMDI5LDc3MzMwMDM1MiwtMjA4NDY0OTg4OCwtOT
+EwMTM0MDAxLC0xOTI2NTQzNjg2LC0xOTQ1NjQwNDk3LDEzNDc2
+MzI4OTIsMTAyMzYyNDUwOSwtNjYyNTY0NjQsMTIyMTc1OTc1OC
+wxNDgxMjY5MTc2LC0xMjI5ODY0MDg4LC0xNzk3NjQzMTczLC04
+ODI1MjQ5MDRdfQ==
 -->
