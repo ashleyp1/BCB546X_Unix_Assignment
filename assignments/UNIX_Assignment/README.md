@@ -78,25 +78,25 @@ head -1 trimmed_snp_position.txt > snp_header.txt
 ```
 sort -k1,1 file.txt > sorted_file.txt
 ```
-* Join files. Join based on the first column of each file, with the resulting file delimited by tabs.
+* Join files. Join based on the first column of each file, with the resulting file delimited by tabs. (Repeat for teosinte)
 ```
 join -1 1 -2 1 -t $'\t' sorted_trimmed_snp.txt sorted_trans_maize.txt > joined_maize.txt
 ```
-* make a file with all unknown and multiple position snps removed
+* make a file with all unknown and multiple position snps removed (repeat for teosinte)
 ```
 grep -vE "unknown|multiple" joined_maize.txt > trimmed_maize.txt
 ```
-* Make files of all with unknown position and all multiple position snps.
+* Make files of all with unknown position and all multiple position snps. (repeat for teosinte)
 ```
 grep "unknown" joined_maize.txt > unknown_position_maize.txt
 grep "multiple" joined_maize.txt > multiple_position_maize.txt
 ```
 
-* Sort by chromosome
+* Sort by chromosome (repeat for teosinte)
 ```
 awk '{print >> $2"_chromo_maize.txt"}' trimmed_maize.txt
 ```
-* Sort by position
+* Sort by position, repeating for each chromosome file.
 ```
 sort -k3,3 -n 1_chromo_maize.txt > 1_chromo_incre_maize.txt
 sort -k3,3 -n -r 1_chromo_maize.txt > 1_chromo_decre_maize.txt
@@ -116,11 +116,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTU1MzEzOTQsMTEyNzk0OTMwOCwxND
-UxMjAwOTU3LC01MjE1MzI2NDksODc5MTA0OTQsMTMxMzE3NTI1
-MSwxNzEzOTU0NzQ0LC0xNTc5Nzk2NDY2LDIyNzU0MzQxOCwtMT
-IwMjk0NDcxOCwtMTkwNjU5MDg3NiwtMTA0MzU5ODYzNiwtNTI2
-MjI2MTYwLDY0NTk3OTMwMSwtMTczOTA5NDQ5Nyw1NTg1NjA5ND
-MsMTA3NzcyODk0OCwxMDIxNjMxMjQ0LDEwMjA4OTU3NDMsLTg3
-OTIxMTUwN119
+eyJoaXN0b3J5IjpbMTc5NTgxNzIzNywxMTI3OTQ5MzA4LDE0NT
+EyMDA5NTcsLTUyMTUzMjY0OSw4NzkxMDQ5NCwxMzEzMTc1MjUx
+LDE3MTM5NTQ3NDQsLTE1Nzk3OTY0NjYsMjI3NTQzNDE4LC0xMj
+AyOTQ0NzE4LC0xOTA2NTkwODc2LC0xMDQzNTk4NjM2LC01MjYy
+MjYxNjAsNjQ1OTc5MzAxLC0xNzM5MDk0NDk3LDU1ODU2MDk0My
+wxMDc3NzI4OTQ4LDEwMjE2MzEyNDQsMTAyMDg5NTc0MywtODc5
+MjExNTA3XX0=
 -->
