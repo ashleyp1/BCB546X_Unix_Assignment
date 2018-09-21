@@ -1,11 +1,6 @@
 # BCB546X_Unix_Assignment
 ## Inspecting the Data
-* Inspect the top of the files `fang_et_al_genotypes.txt` and `snp_position.txt`
 
-```
-cut -f 1-6 file.txt | column -t | (head -n 5; tail -n 5)
-
-```
 * Word count gives files sizes and some general numbers
 ```
 wc snp_position.txt
@@ -13,6 +8,10 @@ wc snp_position.txt
 * Inspect the number of columns in files (useful for checking your work as you go)
 ```
 awk -F "\t" '{print NF; exit}' file.txt
+```
+* Inspect the top of the files `fang_et_al_genotypes.txt` and `snp_position.txt`
+```
+cut -f 1-6 file.txt | column -t | (head -n 5; tail -n 5)
 ```
 
 ## Processing the Data
@@ -83,7 +82,7 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NzExMDM3OSwtNTIxNTMyNjQ5LDg3OT
+eyJoaXN0b3J5IjpbMTQ1MTIwMDk1NywtNTIxNTMyNjQ5LDg3OT
 EwNDk0LDEzMTMxNzUyNTEsMTcxMzk1NDc0NCwtMTU3OTc5NjQ2
 NiwyMjc1NDM0MTgsLTEyMDI5NDQ3MTgsLTE5MDY1OTA4NzYsLT
 EwNDM1OTg2MzYsLTUyNjIyNjE2MCw2NDU5NzkzMDEsLTE3Mzkw
