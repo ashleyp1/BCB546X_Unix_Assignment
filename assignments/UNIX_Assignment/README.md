@@ -45,6 +45,7 @@ CU0202       Zmm-IL-Yu796_NS_f         ZMMIL  C/C       A/A
 ```
 
 ## Processing the Data
+#### Re
 * Move maize data to one folder ( repeat with teosinte replacing maize terms)
 
 ```
@@ -52,6 +53,11 @@ touch maize_search.txt
 vi maize_search.txt
 #Write and save ZMMIL, ZMMLR, ZMMMR
 grep -f maize_search.txt fang_et_al_genotypes.txt >> maize_genotypes.txt
+
+touch teosinte_search.txt 
+vi teosinte_search.txt
+#Write and save ZMPBA, ZMPIL, ZMPJA
+grep -f teosinte_search.txt fang_et_al_genotypes.txt >> teosinte_genotypes.txt
 ```
 * Add the header back, required for sorting later on.
 ```
@@ -112,11 +118,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNzk0OTMwOCwxNDUxMjAwOTU3LC01Mj
-E1MzI2NDksODc5MTA0OTQsMTMxMzE3NTI1MSwxNzEzOTU0NzQ0
-LC0xNTc5Nzk2NDY2LDIyNzU0MzQxOCwtMTIwMjk0NDcxOCwtMT
-kwNjU5MDg3NiwtMTA0MzU5ODYzNiwtNTI2MjI2MTYwLDY0NTk3
-OTMwMSwtMTczOTA5NDQ5Nyw1NTg1NjA5NDMsMTA3NzcyODk0OC
-wxMDIxNjMxMjQ0LDEwMjA4OTU3NDMsLTg3OTIxMTUwNywxNTY3
-MTIwNDJdfQ==
+eyJoaXN0b3J5IjpbLTE4MzcwMjU0MzUsMTEyNzk0OTMwOCwxND
+UxMjAwOTU3LC01MjE1MzI2NDksODc5MTA0OTQsMTMxMzE3NTI1
+MSwxNzEzOTU0NzQ0LC0xNTc5Nzk2NDY2LDIyNzU0MzQxOCwtMT
+IwMjk0NDcxOCwtMTkwNjU5MDg3NiwtMTA0MzU5ODYzNiwtNTI2
+MjI2MTYwLDY0NTk3OTMwMSwtMTczOTA5NDQ5Nyw1NTg1NjA5ND
+MsMTA3NzcyODk0OCwxMDIxNjMxMjQ0LDEwMjA4OTU3NDMsLTg3
+OTIxMTUwN119
 -->
