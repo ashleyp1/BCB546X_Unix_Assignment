@@ -4,6 +4,9 @@
 * Word count gives files sizes and some general numbers
 ```
 wc snp_position.txt
+ 984 13198 82763 snp_position.txt
+wc fang_et_al_genotypes.txt
+ 2783 2744038 11051939 fang_et_al
 ```
 * Inspect the number of columns in files (useful for checking your work as you go)
 ```
@@ -82,11 +85,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1MTIwMDk1NywtNTIxNTMyNjQ5LDg3OT
-EwNDk0LDEzMTMxNzUyNTEsMTcxMzk1NDc0NCwtMTU3OTc5NjQ2
-NiwyMjc1NDM0MTgsLTEyMDI5NDQ3MTgsLTE5MDY1OTA4NzYsLT
-EwNDM1OTg2MzYsLTUyNjIyNjE2MCw2NDU5NzkzMDEsLTE3Mzkw
-OTQ0OTcsNTU4NTYwOTQzLDEwNzc3Mjg5NDgsMTAyMTYzMTI0NC
-wxMDIwODk1NzQzLC04NzkyMTE1MDcsMTU2NzEyMDQyLDE4NDcy
-ODc5NDldfQ==
+eyJoaXN0b3J5IjpbMTc5Nzg1MzgwNSwxNDUxMjAwOTU3LC01Mj
+E1MzI2NDksODc5MTA0OTQsMTMxMzE3NTI1MSwxNzEzOTU0NzQ0
+LC0xNTc5Nzk2NDY2LDIyNzU0MzQxOCwtMTIwMjk0NDcxOCwtMT
+kwNjU5MDg3NiwtMTA0MzU5ODYzNiwtNTI2MjI2MTYwLDY0NTk3
+OTMwMSwtMTczOTA5NDQ5Nyw1NTg1NjA5NDMsMTA3NzcyODk0OC
+wxMDIxNjMxMjQ0LDEwMjA4OTU3NDMsLTg3OTIxMTUwNywxNTY3
+MTIwNDJdfQ==
 -->
