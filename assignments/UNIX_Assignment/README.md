@@ -1,6 +1,9 @@
 # BCB546X_Unix_Assignment
 ## Inspecting the Data
 
+* Inspect the file size
+```
+```
 * Word count gives files sizes and some general numbers
 ```
 wc snp_position.txt
@@ -17,7 +20,7 @@ awk -F "\t" '{print NF; exit}' fang_et_al_genotypes.txt
 ```
 * Inspect the top and bottom of the files `fang_et_al_genotypes.txt` and `snp_position.txt`
 ```
-cut -f 1-5 file.txt | column -t | (head -n 3; tail -n 3)
+cut -f 1-5 snp_position.txt | column -t | (head -n 3; tail -n 3)
 SNP_ID          cdv_marker_id  Chromosome  Position   alt_pos
 abph1.20        5976           2           27403404
 abph1.22        5978           2           27403892
@@ -25,6 +28,7 @@ zen1.4          3521           unknown     unknown
 zfl2.6          6463           2           12543294
 zmm3.4          3527           9           16966348
 
+cut -f 1-5 fang_et_al_genotypes.txt | column -t | (head -n 3; tail -n 3)
 Sample_ID    JG_OTU                    Group  abph1.20  abph1.22
 SL-15        T-aust-1                  TRIPS  ?/?       ?/?
 SL-16        T-aust-2                  TRIPS  ?/?       ?/?
@@ -101,11 +105,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyOTIxOTg5OSwxNDUxMjAwOTU3LC01Mj
-E1MzI2NDksODc5MTA0OTQsMTMxMzE3NTI1MSwxNzEzOTU0NzQ0
-LC0xNTc5Nzk2NDY2LDIyNzU0MzQxOCwtMTIwMjk0NDcxOCwtMT
-kwNjU5MDg3NiwtMTA0MzU5ODYzNiwtNTI2MjI2MTYwLDY0NTk3
-OTMwMSwtMTczOTA5NDQ5Nyw1NTg1NjA5NDMsMTA3NzcyODk0OC
-wxMDIxNjMxMjQ0LDEwMjA4OTU3NDMsLTg3OTIxMTUwNywxNTY3
-MTIwNDJdfQ==
+eyJoaXN0b3J5IjpbLTE4NTY1NzQ5NjgsMTQ1MTIwMDk1NywtNT
+IxNTMyNjQ5LDg3OTEwNDk0LDEzMTMxNzUyNTEsMTcxMzk1NDc0
+NCwtMTU3OTc5NjQ2NiwyMjc1NDM0MTgsLTEyMDI5NDQ3MTgsLT
+E5MDY1OTA4NzYsLTEwNDM1OTg2MzYsLTUyNjIyNjE2MCw2NDU5
+NzkzMDEsLTE3MzkwOTQ0OTcsNTU4NTYwOTQzLDEwNzc3Mjg5ND
+gsMTAyMTYzMTI0NCwxMDIwODk1NzQzLC04NzkyMTE1MDcsMTU2
+NzEyMDQyXX0=
 -->
