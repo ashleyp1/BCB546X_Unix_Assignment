@@ -61,7 +61,7 @@ sort -k3,3 -n -r 1_chromo_maize.txt > 1_chromo_decre_maize.txt
 ```
 * Replace ? with - for decreasing files
 ```
-sed -i 's/?/-/g' 1_chromo_decreasing_maize.txt
+sed -i 's/?/-/g' 1_chromo_decre_maize.txt
 ```
 
 * add header, do for every final file
@@ -74,11 +74,11 @@ cat joined_maize_header.txt | cat - 1_chromo_incre_maize.txt > temp && mv temp 1
 * The final files were all placed in the folder `Final`, and all the intermediate files created along the way are under `Intermediate`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Nzk3OTY0NjYsMjI3NTQzNDE4LC0xMj
-AyOTQ0NzE4LC0xOTA2NTkwODc2LC0xMDQzNTk4NjM2LC01MjYy
-MjYxNjAsNjQ1OTc5MzAxLC0xNzM5MDk0NDk3LDU1ODU2MDk0My
-wxMDc3NzI4OTQ4LDEwMjE2MzEyNDQsMTAyMDg5NTc0MywtODc5
-MjExNTA3LDE1NjcxMjA0MiwxODQ3Mjg3OTQ5LC02ODg2NDIwMj
-ksNzczMzAwMzUyLC0yMDg0NjQ5ODg4LC05MTAxMzQwMDEsLTE5
-MjY1NDM2ODZdfQ==
+eyJoaXN0b3J5IjpbMTcxMzk1NDc0NCwtMTU3OTc5NjQ2NiwyMj
+c1NDM0MTgsLTEyMDI5NDQ3MTgsLTE5MDY1OTA4NzYsLTEwNDM1
+OTg2MzYsLTUyNjIyNjE2MCw2NDU5NzkzMDEsLTE3MzkwOTQ0OT
+csNTU4NTYwOTQzLDEwNzc3Mjg5NDgsMTAyMTYzMTI0NCwxMDIw
+ODk1NzQzLC04NzkyMTE1MDcsMTU2NzEyMDQyLDE4NDcyODc5ND
+ksLTY4ODY0MjAyOSw3NzMzMDAzNTIsLTIwODQ2NDk4ODgsLTkx
+MDEzNDAwMV19
 -->
