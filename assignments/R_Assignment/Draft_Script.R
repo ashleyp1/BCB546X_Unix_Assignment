@@ -1,3 +1,5 @@
+install.packages("anchors")
+library(anchors)
 library(tidyverse)
 
 genotypes <- read.delim("fang_et_al_genotypes.txt", header = T)
@@ -60,8 +62,13 @@ chromo_9_teosinte <- filter(merged_teosinte, Chromosome == 9 & Position != "unkn
 chromo_10_teosinte <- filter(merged_teosinte, Chromosome == 10 & Position != "unknown" & Position != "multiple")
 
 
+#replaces ? with - in file, overwrites old one so only do on final files
+chromo_1_maize[] <- lapply(chromo_1_maize, gsub, pattern = "?", replacement = "-", fixed = TRUE)
+
+#save as file
 write.table(unknown_maize, file = "unknown_maize.txt", append = F, sep = "\t")
 write.table(multiple_maize, file = "multiple_maize.txt", append = F, sep = "\t")
+
 
 
 
