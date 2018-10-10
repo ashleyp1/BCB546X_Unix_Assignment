@@ -33,6 +33,20 @@ trim_SNP = snps[c("SNP_ID","Chromosome","Position")]
 merged_maize <- merge(trim_SNP, trans_maize, by.x = 1, by.y = 0)
 merged_teosinte <- merge(trim_SNP, trans_teosinte, by.x = 1, by.y = 0)
 
+maize_chromo_function <- function(data, chromo){
+  data <- filter(data, Chromosome == chromo & Position != "unknown" & Position != "multiple")
+  data_ascen <- arrange(data, Position)
+  data_descen <- arrange(data, desc(Position))
+  title_ascen <- paste(chromo, "ascen_maize.txt", sep = "_")
+  title_descen <- paste(chromo,"descen_maize.txt", sep = "_")
+  data_descen[] <- lapply(data_descen, gsub, pattern = "?", replacement = "-", fixed = TRUE)
+  write.table(data_descen, file = title_descen, append = F, sep = "\t")
+  write.table(data_ascen, file = title_ascen, append = F, sep = "\t")
+}
+
+
+maize_chromo_function(merged_maize, 1)
+
 unknown_maize <- filter(merged_maize, Chromosome == "unknown" | Position == "unknown")
 multiple_maize <- filter(merged_maize, Chromosome == "multiple" | Position == "multiple")
 chromo_1_maize <- filter(merged_maize, Chromosome == 1 & Position != "unknown" & Position != "multiple")
