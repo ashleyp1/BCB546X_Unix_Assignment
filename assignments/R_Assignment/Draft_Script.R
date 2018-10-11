@@ -1,9 +1,11 @@
-install.packages("anchors")
-library(anchors)
 library(tidyverse)
+library(reshape2)
+library(ggplot2)
 
-genotypes <- read.delim("fang_et_al_genotypes.txt", header = T)
-snps <- read.delim("snp_position.txt", header = T)
+genotypes <- read.table("fang_et_al_genotypes.txt", header = T,
+                        sep = "\t", stringsAsFactors = F)
+snps <- read.table("snp_position.txt", header = T,
+                   sep = "\t", stringsAsFactors = F)
 
 
 
@@ -16,7 +18,7 @@ teosinte_genotypes <- genotypes[which (genotypes$Group == "ZMPBA" |
                                          genotypes$Group == "ZMPIL" |
                                          genotypes$Group == "ZMPJA"),]
 
-
+##make headers
 header_maize <- maize_genotypes$Sample_ID
 trans_maize <- as.data.frame(t(maize_genotypes[,-1]))
 colnames(trans_maize) <- header_maize
@@ -25,16 +27,25 @@ header_teosinte <- teosinte_genotypes$Sample_ID
 trans_teosinte <- as.data.frame(t(teosinte_genotypes[,-1]))
 colnames(trans_teosinte) <- header_teosinte
 
-
+##trim SNPs to 3 columns
 trim_SNP = snps[c("SNP_ID","Chromosome","Position")]
 
 
-
+##merge SNP and geno
 merged_maize <- merge(trim_SNP, trans_maize, by.x = 1, by.y = 0)
 merged_teosinte <- merge(trim_SNP, trans_teosinte, by.x = 1, by.y = 0)
 
+
+
+##data <- filter(merged_maize, Chromosome == 2 & Position != "unknown" &
+##                 Position != "multiple" & Chromosome != "multiple")
+##data_ascen <- data[order(data$Position),]
+
+
+#split by chromosome, sort into ascending and descending, write to files
 maize_chromo_function <- function(data, chromo){
-  data <- filter(data, Chromosome == chromo & Position != "unknown" & Position != "multiple")
+  data <- filter(data, Chromosome == chromo & Position != "unknown" &
+                   Position != "multiple" & Chromosome != "multiple")
   data_ascen <- arrange(data, Position)
   data_descen <- arrange(data, desc(Position))
   title_ascen <- paste(chromo, "ascen_maize.txt", sep = "_")
@@ -44,45 +55,51 @@ maize_chromo_function <- function(data, chromo){
   write.table(data_ascen, file = title_ascen, append = F, sep = "\t")
 }
 
-
-maize_chromo_function(merged_maize, 1)
-
-unknown_maize <- filter(merged_maize, Chromosome == "unknown" | Position == "unknown")
-multiple_maize <- filter(merged_maize, Chromosome == "multiple" | Position == "multiple")
-chromo_1_maize <- filter(merged_maize, Chromosome == 1 & Position != "unknown" & Position != "multiple")
-chromo_2_maize <- filter(merged_maize, Chromosome == 2 & Position != "unknown" & Position != "multiple")
-chromo_3_maize <- filter(merged_maize, Chromosome == 3 & Position != "unknown" & Position != "multiple")
-chromo_4_maize <- filter(merged_maize, Chromosome == 4 & Position != "unknown" & Position != "multiple")
-chromo_5_maize <- filter(merged_maize, Chromosome == 5 & Position != "unknown" & Position != "multiple")
-chromo_6_maize <- filter(merged_maize, Chromosome == 6 & Position != "unknown" & Position != "multiple")
-chromo_7_maize <- filter(merged_maize, Chromosome == 7 & Position != "unknown" & Position != "multiple")
-chromo_8_maize <- filter(merged_maize, Chromosome == 8 & Position != "unknown" & Position != "multiple")
-chromo_9_maize <- filter(merged_maize, Chromosome == 9 & Position != "unknown" & Position != "multiple")
-chromo_10_maize <- filter(merged_maize, Chromosome == 10 & Position != "unknown" & Position != "multiple")
+teosinte_chromo_function <- function(data, chromo){
+  data <- filter(data, Chromosome == chromo & Position != "unknown" &
+                   Position != "multiple" & Chromosome != "multiple")
+  data_ascen <- arrange(data, Position)
+  data_descen <- arrange(data, desc(Position))
+  title_ascen <- paste(chromo, "ascen_teosinte.txt", sep = "_")
+  title_descen <- paste(chromo,"descen_teosinte.txt", sep = "_")
+  data_descen[] <- lapply(data_descen, gsub, pattern = "?", replacement = "-", fixed = TRUE)
+  write.table(data_descen, file = title_descen, append = F, sep = "\t")
+  write.table(data_ascen, file = title_ascen, append = F, sep = "\t")
+}
 
 
-
-unknown_teosinte <- filter(merged_teosinte, Chromosome == "unknown" | Position == "unknown")
-multiple_teosinte <- filter(merged_teosinte, Chromosome == "multiple" | Position == "multiple")
-chromo_1_teosinte <- filter(merged_teosinte, Chromosome == 1 & Position != "unknown" & Position != "multiple")
-chromo_2_teosinte <- filter(merged_teosinte, Chromosome == 2 & Position != "unknown" & Position != "multiple")
-chromo_3_teosinte <- filter(merged_teosinte, Chromosome == 3 & Position != "unknown" & Position != "multiple")
-chromo_4_teosinte <- filter(merged_teosinte, Chromosome == 4 & Position != "unknown" & Position != "multiple")
-chromo_5_teosinte <- filter(merged_teosinte, Chromosome == 5 & Position != "unknown" & Position != "multiple")
-chromo_6_teosinte <- filter(merged_teosinte, Chromosome == 6 & Position != "unknown" & Position != "multiple")
-chromo_7_teosinte <- filter(merged_teosinte, Chromosome == 7 & Position != "unknown" & Position != "multiple")
-chromo_8_teosinte <- filter(merged_teosinte, Chromosome == 8 & Position != "unknown" & Position != "multiple")
-chromo_9_teosinte <- filter(merged_teosinte, Chromosome == 9 & Position != "unknown" & Position != "multiple")
-chromo_10_teosinte <- filter(merged_teosinte, Chromosome == 10 & Position != "unknown" & Position != "multiple")
+## loop through all chromosomes
+for (i in 1:10) {
+  maize_chromo_function(merged_maize, i)
+  teosinte_chromo_function(merged_teosinte, i)
+}
 
 
-#replaces ? with - in file, overwrites old one so only do on final files
-chromo_1_maize[] <- lapply(chromo_1_maize, gsub, pattern = "?", replacement = "-", fixed = TRUE)
+##descen_2_maize <- read.delim("2_descen_maize.txt", header = T)
+##ascen_2_maize <- read.delim("2_ascen_maize.txt", header = T)
 
-#save as file
-write.table(unknown_maize, file = "unknown_maize.txt", append = F, sep = "\t")
-write.table(multiple_maize, file = "multiple_maize.txt", append = F, sep = "\t")
+##Graph Snps per chromosome
+##Reshape
+header_genotypes <- genotypes$Sample_ID
+trans_genotypes <- as.data.frame(t(genotypes[,-1]))
+colnames(trans_genotypes) <- header_genotypes
+trim_SNP = snps[c("SNP_ID","Chromosome","Position")]
 
+##merge SNP and geno
+merged_data <- merge(trim_SNP, trans_genotypes, by.x = 1, by.y = 0)
 
+##melt_data <- melt(merged_data, "Chromosome", "SNP_ID")
+merged_data$Chromosome <- as.factor(merged_data$Chromosome)
+levels(merged_data$Chromosome) <- c(1:10, "unknown", "multiple")
+ggplot(merged_data) +geom_bar(aes(x=Chromosome, fill=Chromosome)) + 
+  ggtitle("SNPs per Chromosome") + 
+  labs(x="Chromosome",y="SNP Count")
 
+ggplot(merged_data) +geom_bar(aes(x=Chromosome, fill=Chromosome)) + 
+  ggtitle("SNPs per Chromosome") + 
+  labs(x="Chromosome",y="SNP Count")
 
+ggplot(genotypes, aes(Group)) +
+  geom_bar(aes(fill = Group))
+
+##heterozygocity???
