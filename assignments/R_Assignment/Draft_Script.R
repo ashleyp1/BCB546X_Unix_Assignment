@@ -1,3 +1,4 @@
+library(knitr)
 library(tidyverse)
 library(reshape2)
 library(ggplot2)
@@ -127,5 +128,3 @@ SNP_Hetero$Percent <- SNP_Hetero$n /2782
 
 ggplot(melted_data) + geom_bar(aes(x = SNP_ID, fill = SNP_Type), position = "fill") +
   ggtitle("Heterozygocity per Species") + labs(x = "Species", y = "Proportion of Types")
-
-

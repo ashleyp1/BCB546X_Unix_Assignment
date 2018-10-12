@@ -9,8 +9,7 @@ output:
 
 ##Required Packages and Files
 
-
-```r
+```{r, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(reshape2)
 library(ggplot2)
@@ -24,86 +23,18 @@ snps <- read.table("snp_position.txt", header = T,
 #Part 1
 ## Data Inspection
 
-
-```r
+```{r}
 typeof(genotypes)
-```
-
-```
-## [1] "list"
-```
-
-```r
 ncol(genotypes)
-```
-
-```
-## [1] 986
-```
-
-```r
 nrow(genotypes)
-```
-
-```
-## [1] 2782
-```
-
-```r
 class(genotypes)
-```
-
-```
-## [1] "data.frame"
-```
-
-```r
 ##view(genotypes) uncomment this if you want
 
 ncol(snps)
-```
-
-```
-## [1] 15
-```
-
-```r
 nrow(snps)
-```
-
-```
-## [1] 983
-```
-
-```r
 names(snps)
-```
-
-```
-##  [1] "SNP_ID"               "cdv_marker_id"        "Chromosome"          
-##  [4] "Position"             "alt_pos"              "mult_positions"      
-##  [7] "amplicon"             "cdv_map_feature.name" "gene"                
-## [10] "candidate.random"     "Genaissance_daa_id"   "Sequenom_daa_id"     
-## [13] "count_amplicons"      "count_cmf"            "count_gene"
-```
-
-```r
 class(snps)
-```
-
-```
-## [1] "data.frame"
-```
-
-```r
 typeof(snps)
-```
-
-```
-## [1] "list"
-```
-
-```r
 ##view(snps)
 ```
 
@@ -113,8 +44,7 @@ typeof(snps)
 
 Separating the genotypes into maize and teosinte, then merging
 
-
-```r
+``` {r}
 ##maize ZMMIL ZMMLR ZMMMR
 maize_genotypes <- genotypes[which (genotypes$Group == "ZMMIL" |
                               genotypes$Group == "ZMMLR" |
@@ -145,8 +75,7 @@ merged_teosinte <- merge(trim_SNP, trans_teosinte, by.x = 1, by.y = 0)
 
 ###Splitting data by chromosome, sorting it and saving it to files
 
-
-```r
+```{r}
 ## functions to split by chromosome, sort into ascending and descending, and write to files
 maize_chromo_function <- function(data, chromo){
   data <- filter(data, Chromosome == chromo & Position != "unknown" &
@@ -185,8 +114,7 @@ for (i in 1:10) {
 
 ###Graphing SNPS per Chromosome and per Group
 
-
-```r
+```{r}
 ##Reshape
 header_genotypes <- genotypes$Sample_ID
 trans_genotypes <- as.data.frame(t(genotypes[,-1]))
@@ -203,31 +131,24 @@ levels(merged_data$Chromosome) <- c(1:10, "unknown", "multiple")
 
 Graph by chromosomes
 
-
-```r
+```{r}
 ggplot(merged_data) +geom_bar(aes(x=Chromosome, fill=Chromosome)) + 
   ggtitle("SNPs per Chromosome") + 
   labs(x="Chromosome",y="SNP Count")
 ```
 
-![](README_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
-
 Graph by group
 
-
-```r
+```{r}
 ggplot(genotypes, aes(Group)) +
   geom_bar(aes(fill = Group))
 ```
-
-![](README_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 ###Amount of Heterozygosity
 
 Heterozygocity by group
 
-
-```r
+```{r}
 ##heterozygocity
 
 melted_geno <- melt(genotypes, id = c("Sample_ID", "Group", "JG_OTU"))
@@ -250,12 +171,9 @@ ggplot(sorted_het_data) + geom_bar(aes(x = Group, fill = SNP_Type), position = "
   ggtitle("Heterozygocity by Group") + labs(x = "Group", y = "SNP Types")
 ```
 
-![](README_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
-
 Heterozygocity by Species
 
-
-```r
+```{r}
 ##heterozygocity by Species
 
 ##used JG_OTU with the with the sample number removed to sort by species
@@ -269,12 +187,9 @@ ggplot(sorted_het_data) + geom_bar(aes(x = Species, fill = SNP_Type), position =
   ggtitle("Heterozygocity by Species") + labs(x = "Species", y = "SNP Types")
 ```
 
-![](README_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
-
 Heterozygocity of SNPs
 
-
-```r
+```{r}
 ## percent heterozygosity by SNP ID
 ##total SNPS = 2782
 SNP_Hetero <- melted_data %>% group_by(SNP_ID,SNP_Type) %>% summarize(n=n())
@@ -283,7 +198,5 @@ SNP_Hetero$Percent <- SNP_Hetero$n /2782
 ggplot(melted_data) + geom_bar(aes(x = SNP_ID, fill = SNP_Type), position = "fill") +
   ggtitle("Heterozygocity per SNP") + labs(x = "SNP ID", y = "SNP Types")
 ```
-
-![](README_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 
