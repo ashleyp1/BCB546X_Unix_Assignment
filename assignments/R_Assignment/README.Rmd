@@ -8,6 +8,8 @@ output:
 ---
 
 ##Required Packages and Files
+# It would be better if you also include the install command before the library command. 
+# When we import a file into R, the file directory is important since it tells us where we can find the files.
 
 ```{r, warning=FALSE, message=FALSE}
 library(tidyverse)
@@ -22,7 +24,7 @@ snps <- read.table("snp_position.txt", header = T,
 
 #Part 1
 ## Data Inspection
-
+# This part looks good!
 ```{r}
 typeof(genotypes)
 ncol(genotypes)
@@ -41,7 +43,7 @@ typeof(snps)
 ## Data Processing
 
 ###Preparing files
-
+# Good job on this part!
 Separating the genotypes into maize and teosinte, then merging
 
 ``` {r}
@@ -74,7 +76,7 @@ merged_teosinte <- merge(trim_SNP, trans_teosinte, by.x = 1, by.y = 0)
 ```
 
 ###Splitting data by chromosome, sorting it and saving it to files
-
+#The function you made is clear and neat. The for loop works really nice!
 ```{r}
 ## functions to split by chromosome, sort into ascending and descending, and write to files
 maize_chromo_function <- function(data, chromo){
@@ -113,7 +115,7 @@ for (i in 1:10) {
 ##Graphing Data
 
 ###Graphing SNPS per Chromosome and per Group
-
+# All the commands work perfectly. It would be better if you can save all the images you generated!
 ```{r}
 ##Reshape
 header_genotypes <- genotypes$Sample_ID
