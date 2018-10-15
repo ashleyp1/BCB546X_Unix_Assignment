@@ -200,5 +200,5 @@ SNP_Hetero$Percent <- SNP_Hetero$n /2782
 ggplot(melted_data) + geom_bar(aes(x = SNP_ID, fill = SNP_Type), position = "fill") +
   ggtitle("Heterozygocity per SNP") + labs(x = "SNP ID", y = "SNP Types")
 ```
-
+# You have done an excellent job!
 
