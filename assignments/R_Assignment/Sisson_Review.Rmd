@@ -1,0 +1,20 @@
+---
+title: "Sisson_Review"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Assignment Review for Ashley Paulsen
+
+### All of the code runs perfectly for me. I really like the way you nested the "sort in ascending/descending order"" and "replacing symbols" functions within another function in order to call it on the variables quite easily. That makes for code that can be easily applied to multiple variables and that's always convenient. 
+
+### The SNPs per Chromosome graph looks really nice and putting the chromosomes in order is very nice.
+
+### The second graph, which I believe is SNP count per Group, doesn't have a title. However, other than a missing title, I think it looks good. 
+
+### The Heterozygocity per Group graph looked good; there isn't anything missing and it is normalized.
+
+### The Heterozygotcity per Species graphs both look very good and again, nothing seems to be missing and is normalized. With the second graph, maybe say it is "Heterozygocity Per SNP_ID" not "Heterozygocity per Species". I was confused on why they had the same name but did not look the same; otherwise, the graphs look good. 
